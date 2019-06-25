@@ -1,0 +1,15 @@
+.profile-container {
+    border: 2px solid blue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8% 0 8% 0;
+}
+
+.profile {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ;
+}

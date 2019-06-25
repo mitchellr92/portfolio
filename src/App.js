@@ -6,11 +6,13 @@ import AboutMe from './Components/AboutMe/AboutMe';
 import Contact from './Components/Contact/Contact';
 import Header from './Components/Header/Header';
 import Portfolio from './Components/Portfolio/Portfolio';
+import Profile from './Components/Profile/Profile';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Profile />
       <AboutMe />
       <Portfolio />
       <Contact />
