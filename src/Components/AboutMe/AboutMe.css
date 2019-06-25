@@ -1,0 +1,14 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 3%;
+    padding-top: 3%;
+    border-top: 1px solid grey;
+}
+
+.about-content {
+    width: 65%;
+    text-align: center;
+}
