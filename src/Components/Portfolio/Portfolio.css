@@ -1,0 +1,19 @@
+.portfolio-container {
+  width: 90%;
+  padding-top: 5%;
+  margin-bottom: 3%;
+  border-top: 1px solid lightgrey;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.project {
+  border-radius: 5%;
+  background-color: lightgrey;
+  width: 20%;
+  box-shadow: 10px 10px 5px gray;
+}

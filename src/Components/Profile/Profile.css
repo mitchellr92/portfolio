@@ -1,14 +1,21 @@
 .profile-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 8% 0 8% 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 8% 0 8% 0;
 }
 
 .profile {
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    ;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5%;
+  background-color: lightgrey;
+  padding: 1% 1% 1% 1%;
+  box-shadow: 10px 10px 5px gray;
+}
+
+img {
+  border-radius: 15%;
 }
