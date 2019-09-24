@@ -1,0 +1,22 @@
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 2%;
+  border-top: 1px solid lightgrey;
+}
+
+.skills {
+    padding: 2%;
+    border-radius: 2%;
+    background-color: lightgrey;
+}
+
+li {
+    display: flex;
+}
+
+.skill {
+    font-weight: bold;
+}

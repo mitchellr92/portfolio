@@ -11,7 +11,7 @@ class AboutMe extends Component {
           creating quality products. I enjoy working on teams and communicating
           with others to reach a common goal. When I am not busy with work or
           study spend most of my time with my family, in the outdoors or
-          watching movies.
+          woodworking.
         </p>
       </div>
     );

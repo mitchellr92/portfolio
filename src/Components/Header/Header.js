@@ -10,8 +10,8 @@ class Header extends Component {
         <div className="header">
           <div className="button">Top</div>
           <div className="button">About Me</div>
+          <div className="button">Skills</div>
           <div className="button">Portfolio</div>
-          <div className="button">Contact</div>
           <a className="button" href="https://github.com/mitchellr92">
             <i class="fab fa-github" />
           </a>

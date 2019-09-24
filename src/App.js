@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import AboutMe from './Components/AboutMe/AboutMe';
-import Contact from './Components/Contact/Contact';
 import Header from './Components/Header/Header';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Profile from './Components/Profile/Profile';
+import Skills from './Components/Skills/Skills';
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
       <Header />
       <Profile />
       <AboutMe />
+      <Skills />
       <Portfolio />
-      <Contact />
     </div>
   );
 }
