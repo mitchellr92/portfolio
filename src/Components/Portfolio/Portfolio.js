@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import screenshot1 from "./screenshot1.png";
 import screenshot2 from "./screenshot2.png";
 import screenshot3 from "./screenshot3.png";
 import "./Portfolio.css";
