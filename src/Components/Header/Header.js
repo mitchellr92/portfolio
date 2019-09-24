@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import 'font-awesome/less/font-awesome.less';
+// import 'font-awesome/less/font-awesome.less';
 import "./Header.css";
 
 class Header extends Component {
