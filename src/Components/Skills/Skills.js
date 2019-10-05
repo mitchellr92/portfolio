@@ -6,32 +6,32 @@ export class Skills extends Component {
     return (
       <div className="skills-container">
         <h2 className="skills-title">Skills</h2>
-        <div className="skills">
-          <ul>
-            <li>
-              <p className="skill">WEB TECHNOLOGIES AND FRAMEWORKS -</p>
-              <p>React, Redux, Node.js, Express, HTML, CSS, LESS</p>
-            </li>
-            <li>
-              <p className="skill">SCRIPTS/UI -</p>{" "}
-              <p>JavaScript, BootStrap, Axios</p>
-            </li>
-            <li>
-              <p className="skill">DATABASE -</p> <p>postgreSQL, SQLite</p>
-            </li>
-            <li>
-              <p className="skill">WEB DEBUG TOOLS -</p>{" "}
-              <p>Chrome Developer Tools</p>
-            </li>
-            <li>
-              <p className="skill">VERSIONING AND OTHER TOOLS -</p>{" "}
-              <p>Gitbash, Github</p>
-            </li>
-            <li>
-              <p className="skill">DEPLOYMENT TOOLS -</p> <p>Heroku, Netlify</p>
-            </li>
-          </ul>
-        </div>
+        <ul className="skills-list">
+          <li>
+            <i className="fab fa-html5"></i>
+          </li>
+          <li>
+            <i className="fab fa-css3"></i>
+          </li>
+          <li>
+            <i className="fab fa-sass"></i>
+          </li>
+          <li>
+            <i className="fab fa-less"></i>
+          </li>
+          <li>
+            <i className="fab fa-js-square"></i>
+          </li>
+          <li>
+            <i className="fab fa-react"></i>
+          </li>
+          <li>
+            <i className="fab fa-node-js"></i>
+          </li>
+          <li>
+            <i className="fab fa-python"></i>
+          </li>
+        </ul>
       </div>
     );
   }

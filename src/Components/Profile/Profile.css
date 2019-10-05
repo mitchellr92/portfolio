@@ -1,23 +1,50 @@
 .profile-container {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 9% 0 5% 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 5% 0;
 }
 
 .profile {
   width: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   border-radius: 15px;
-  background-color: lightgrey;
   padding: 1% 1% 1% 1%;
-  box-shadow: 10px 10px 5px gray;
+}
+
+.image {
+  border-radius: 50%;
+  width: 50%;
 }
 
 img {
   border-radius: 15px;
   width: auto;
   height: auto;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 20px 0;
+}
+
+.button {
+    font-weight: bold;
+    font-size: 21px;
+    margin-right: 5%;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.fab {
+    color: black;
+    width: 25%;
 }
