@@ -35,16 +35,19 @@ img {
 }
 
 .button {
-    font-weight: bold;
-    font-size: 21px;
-    margin-right: 5%;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 5%;
 }
 
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px black;
 }
 
-.fab {
-    color: black;
-    width: 25%;
+.fa-linkedin-in, .fa-github {
+  width: 10%;
+  font-size: 25px;
+  color: black;
+  
 }

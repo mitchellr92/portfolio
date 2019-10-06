@@ -8,28 +8,28 @@ export class Skills extends Component {
         <h2 className="skills-title">Skills</h2>
         <ul className="skills-list">
           <li>
-            <i className="fab fa-html5"></i>
+            <i className="fab skill fa-html5"></i>
           </li>
           <li>
-            <i className="fab fa-css3"></i>
+            <i className="fab skill fa-css3"></i>
           </li>
           <li>
-            <i className="fab fa-sass"></i>
+            <i className="fab skill fa-sass"></i>
           </li>
           <li>
-            <i className="fab fa-less"></i>
+            <i className="fab skill fa-less"></i>
           </li>
           <li>
-            <i className="fab fa-js-square"></i>
+            <i className="fab skill fa-js-square"></i>
           </li>
           <li>
-            <i className="fab fa-react"></i>
+            <i className="fab skill fa-react"></i>
           </li>
           <li>
-            <i className="fab fa-node-js"></i>
+            <i className="fab skill fa-node-js"></i>
           </li>
           <li>
-            <i className="fab fa-python"></i>
+            <i className="fab skill fa-python"></i>
           </li>
         </ul>
       </div>

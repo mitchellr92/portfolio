@@ -4,46 +4,45 @@
   align-items: center;
   width: 90%;
   margin-bottom: 2%;
+  border-bottom: 1px solid lightgrey;
 }
 
-.skills-list{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-
+.skills-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 li {
-
-    display: flex;
-    /* margin-left: 4%; */
+  display: flex;
+  /* margin-left: 4%; */
 }
 
-.fab{
-    font-size: 50px;
+.skill {
+  font-size: 50px;
 }
 
 .fa-html5 {
-    color: #E34F26;
+  color: #e34f26;
 }
 .fa-css3 {
-    color: #2092EC;
+  color: #2092ec;
 }
 .fa-js-square {
-    color: #F1D63B;
+  color: #f1d63b;
 }
 .fa-react {
-    color: #00D2F8;
+  color: #00d2f8;
 }
 .fa-node-js {
-    color: #7CC620;
+  color: #7cc620;
 }
 .fa-sass {
-    color: #C66395;
+  color: #c66395;
 }
 .fa-less {
-    color: #1D3F6C;
+  color: #1d3f6c;
 }
 .fa-python {
-    color: #5FACEF;
+  color: #5facef;
 }
