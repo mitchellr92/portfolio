@@ -30,13 +30,13 @@ class Portfolio extends Component {
                 </li>
               </ul>
               <a
-                className="button"
+                className="repo-link"
                 href="https://github.com/mitchellr92/front-end-project-week"
               >
                 <p>Front-end repository</p>
               </a>
               <a
-                className="button"
+                className="repo-link"
                 href="https://github.com/mitchellr92/back-end-project-week"
               >
                 <p>Back-end repository</p>
@@ -76,13 +76,13 @@ class Portfolio extends Component {
                 </li>
               </ul>
               <a
-                className="button"
+                className="repo-link"
                 href="https://github.com/labs15-rv-life/frontend"
               >
                 <p>Front-end repository</p>
               </a>
               <a
-                className="button"
+                className="repo-link"
                 href="https://github.com/labs15-rv-life/backend"
               >
                 <p>Back-end repository</p>
