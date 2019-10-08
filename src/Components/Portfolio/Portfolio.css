@@ -31,7 +31,7 @@
 }
 
 .project-info {
-  width: 30%;
+  width: 50%;
 }
 
 .project-info h2 {
@@ -40,7 +40,7 @@
 
 .project-image {
   max-width: 35%;
-  max-height: 350px;
+  max-height: 225px;
   margin: 1%;
   box-shadow: 10px 10px 5px gray;
   width: auto;
@@ -49,7 +49,7 @@
 
 .project-image2 {
   max-width: 40%;
-  max-height: 350px;
+  max-height: 225px;
   margin: 1%;
   box-shadow: 10px 10px 5px gray;
   width: auto;
@@ -64,4 +64,8 @@ a:link {
 a:visited {
   color: purple;
   text-decoration: none;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
 }

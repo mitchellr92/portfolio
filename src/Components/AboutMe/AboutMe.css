@@ -9,7 +9,7 @@
 }
 
 .about-content {
-    border: 1px solid red;
-    width: 65%;
+    max-width: 100%;
+    padding: 0 10%;
     text-align: center;
 }
