@@ -42,7 +42,7 @@
   max-width: 35%;
   max-height: 225px;
   margin: 1%;
-  box-shadow: 10px 10px 5px gray;
+  box-shadow: 10px 10px 5px black;
   width: auto;
   height: auto;
 }
@@ -51,7 +51,7 @@
   max-width: 40%;
   max-height: 225px;
   margin: 1%;
-  box-shadow: 10px 10px 5px gray;
+  box-shadow: 10px 10px 5px black;
   width: auto;
   height: auto;
 }
