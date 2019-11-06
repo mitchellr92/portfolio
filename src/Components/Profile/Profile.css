@@ -9,8 +9,7 @@
 .profile {
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   border-radius: 15px;
   padding: 1% 1% 1% 1%;
@@ -18,7 +17,7 @@
 
 .image {
   border-radius: 50%;
-  width: 30%;
+  width: 20%;
 }
 
 img {
@@ -45,9 +44,64 @@ img {
   text-shadow: 2px 2px 4px black;
 }
 
-.fa-linkedin-in, .fa-github {
+.fa-linkedin-in,
+.fa-github {
   width: 10%;
   font-size: 25px;
   color: black;
-  
+}
+
+@media (min-width: 1000px) {
+  .profile-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 5% 0;
+  }
+
+  .profile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1% 1% 1% 1%;
+  }
+
+  .image {
+    border-radius: 50%;
+    width: 30%;
+  }
+
+  img {
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 20px 0;
+  }
+
+  .button {
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 5%;
+  }
+
+  .button:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 4px black;
+  }
+
+  .fa-linkedin-in,
+  .fa-github {
+    width: 10%;
+    font-size: 25px;
+    color: black;
+  }
 }
