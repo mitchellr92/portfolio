@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "./Profile.css";
+import Modal from "../Modal/modal";
 
 class Profile extends Component {
   render() {
+    console.log(this.props.contactMe)
     return (
       <div className="profile-container">
         <div className="profile">
@@ -26,12 +28,13 @@ class Profile extends Component {
           </a>
           <a
             className="button"
-            href="https://www.linkedin.com/in/mitchell-robles-aa7980165/"
+            href="telto:9517418669"
+            onClick={this.props.contactMe}
           >
-            <i class="fas fa-envelope"></i>
+            <i className="fas fa-envelope"></i>
           </a>
           <a className="button" href="./resume.pdf" download>
-            <i class="fas fa-file-download"></i>
+            <i className="fas fa-file-download"></i>
           </a>
         </div>
       </div>
