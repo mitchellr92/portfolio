@@ -30,11 +30,7 @@ class Profile extends Component {
           >
             <i class="fas fa-envelope"></i>
           </a>
-          <a
-            className="button"
-            href="./resume.pdf"
-            download
-          >
+          <a className="button" href="./resume.pdf" download>
             <i class="fas fa-file-download"></i>
           </a>
         </div>

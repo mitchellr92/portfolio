@@ -1,5 +1,9 @@
 .profile-container {
-  margin-left: 15%;
+  margin-left: 7%;
+  margin-top: 15%;
+  width: 39%;
+  position: absolute;
+  z-index: 5;
 }
 
 .profile {
@@ -15,7 +19,7 @@
 p {
   color: steelblue;
   font-size: 1.8rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .links {
@@ -29,3 +33,4 @@ p {
   margin-left: 7%;
   font-size: 1.9rem;
 }
+
