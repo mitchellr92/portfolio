@@ -11,13 +11,20 @@
   position: absolute;
   background-color: #222222;
   border-radius: 10px;
-  /* display: none; */
+  display: none;
 }
 
 .modal-title {
+  display: flex;
+  justify-content: space-between;
   margin-left: 27px;
+  margin-right: 27px;
   color: steelblue;
   font-size: 2.1rem;
+}
+
+.close-button:hover {
+  cursor: pointer;
 }
 
 .send-message {
@@ -36,15 +43,18 @@ input {
 
 textarea {
   margin-top: 30px;
+  font-size: 18px;
 }
 
 button {
   width: 175px;
   height: 40px;
-  margin-left: 27px;
+  margin-left: 26px;
 }
 
-.contact, .email, .phone {
+.contact,
+.email,
+.phone {
   color: steelblue;
   display: flex;
   align-items: baseline;

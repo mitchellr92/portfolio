@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Profile.css";
-import Modal from "../Modal/modal";
 
 class Profile extends Component {
   render() {

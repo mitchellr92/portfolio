@@ -4,14 +4,19 @@ import "./modal.css";
 export class Modal extends Component {
   render() {
     return (
-      <div className="contact-container">
-        <div className="modal-title">Get In Touch</div>
+      <div
+        className="contact-container"
+        style={{ display: this.props.display }}
+      >
+        <div className="modal-title">
+          Get In Touch<div className="close-button" onClick={this.props.closeModal}>X</div>
+        </div>
         <div className="send-message">
           <input className="Name" placeholder="Name"></input>
           <input className="Email" placeholder="Email"></input>
           <textarea
-            rows="10"
-            cols="73"
+            rows="8"
+            cols="50"
             className="Message"
             placeholder="Message"
           ></textarea>
