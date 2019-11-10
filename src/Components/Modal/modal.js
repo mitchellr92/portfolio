@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import "./modal.css";
 
 export class Modal extends Component {
-
-
   render() {
     return (
       <div className="contact-container">
@@ -11,8 +9,14 @@ export class Modal extends Component {
         <div className="send-message">
           <input className="Name" placeholder="Name"></input>
           <input className="Email" placeholder="Email"></input>
-          <input className="Message" placeholder="Message"></input>
+          <textarea
+            rows="10"
+            cols="73"
+            className="Message"
+            placeholder="Message"
+          ></textarea>
         </div>
+        <button>Send</button>
         <div className="contact">
           <div className="email">
             <i className="fas fa-mobile-alt"> :</i>
