@@ -1,24 +1,43 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 
-import AboutMe from "./Components/AboutMe/AboutMe";
-import Portfolio from "./Components/Portfolio/Portfolio";
+// import Portfolio from "./Components/Portfolio/Portfolio";
 import Profile from "./Components/Profile/Profile";
-import Skills from "./Components/Skills/Skills";
+import Modal from "./Components/Modal/modal";
 
-function App() {
-  return (
-    <div className="App">
-      <div className="sidebar">
-        <Profile />
-        <AboutMe />
+class App extends Component {
+  constructor() {
+    super();
+  }
+
+  state = {
+    display: "none"
+  };
+
+  contactMe = () => {
+    if (this.state.display === "none") {
+      this.setState({ display: "flex" });
+    }
+  };
+
+  closeModal = () => {
+    if (this.state.display === "flex") {
+      this.setState({ display: "none" });
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="contact-modal">
+          <Modal display={this.state.display} closeModal={this.closeModal}/>
+        </div>
+        <div className="profile-main">
+          <Profile contactMe={this.contactMe} />
+        </div>
       </div>
-      <div className="mainContent">
-        <Skills />
-        <Portfolio />
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
