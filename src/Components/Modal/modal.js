@@ -16,12 +16,12 @@ export class Modal extends Component {
           <input className="Email" placeholder="Email"></input>
           <textarea
             rows="8"
-            cols="50"
+            cols="55"
             className="Message"
             placeholder="Message"
           ></textarea>
         </div>
-        <button>Send</button>
+        <p className="send-button">Send</p>
         <div className="contact">
           <div className="email">
             <i className="fas fa-mobile-alt"> :</i>

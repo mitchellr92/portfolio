@@ -16,12 +16,12 @@ class App extends Component {
 
   contactMe = () => {
     if (this.state.display === "none") {
-      this.setState({ display: "block" });
+      this.setState({ display: "flex" });
     }
   };
 
   closeModal = () => {
-    if (this.state.display === "block") {
+    if (this.state.display === "flex") {
       this.setState({ display: "none" });
     }
   }

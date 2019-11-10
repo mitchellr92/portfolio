@@ -1,29 +1,33 @@
 .profile-container {
   margin-left: 7%;
   margin-top: 15%;
-  width: 39%;
+  width: 620px;
   position: absolute;
   z-index: 5;
 }
 
 .profile {
   display: flex;
-  border-bottom: 1px solid grey;
-  margin-bottom: 25px;
-}
-
-.title {
-  margin-left: 4%;
+  justify-content: space-between;
+  width: 75%;
 }
 
 p {
   color: steelblue;
   font-size: 1.8rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .links {
-  width: 61%;
+  border-top: 1px solid grey;
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.link-buttons {
+  width: 75%;
   display: flex;
   justify-content: flex-end;
 }
@@ -34,3 +38,20 @@ p {
   font-size: 1.9rem;
 }
 
+.button:hover {
+  color: slategray;
+}
+
+.projects {
+  color: steelblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+  text-align: end;
+  width: 25%;
+}
+
+.projects:hover {
+  cursor: pointer;
+  color: slategray;
+}
