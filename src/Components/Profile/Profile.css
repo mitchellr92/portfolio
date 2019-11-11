@@ -3,7 +3,7 @@
   margin-top: 15%;
   width: 620px;
   position: absolute;
-  z-index: 5;
+  z-index: 1;
 }
 
 .profile {
@@ -40,6 +40,7 @@ p {
 
 .button:hover {
   color: slategray;
+  cursor: pointer;
 }
 
 .projects {
@@ -54,4 +55,45 @@ p {
 .projects:hover {
   cursor: pointer;
   color: slategray;
+}
+
+@media (max-width: 500px) {
+  .profile-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .profile {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px
+  }
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+
+  .link-buttons {
+    margin-top: 25px;
+    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    margin-left: 0;
+    font-size: 3.5rem;
+  }
+
+  .projects {
+    font-size: 2.5rem;
+    width: 50%;
+    text-align: center;
+    margin-top: 50px;
+  }
 }

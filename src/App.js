@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 
-// import Portfolio from "./Components/Portfolio/Portfolio";
+import Portfolio from "./Components/Portfolio/Portfolio";
 import Profile from "./Components/Profile/Profile";
 import Modal from "./Components/Modal/modal";
 
 class App extends Component {
-  constructor() {
-    super();
-  }
-
   state = {
     display: "none"
   };
@@ -24,17 +20,16 @@ class App extends Component {
     if (this.state.display === "flex") {
       this.setState({ display: "none" });
     }
-  }
+  };
 
   render() {
     return (
       <div className="App">
-        <div className="contact-modal">
-          <Modal display={this.state.display} closeModal={this.closeModal}/>
-        </div>
-        <div className="profile-main">
-          <Profile contactMe={this.contactMe} />
-        </div>
+        <Modal display={this.state.display} closeModal={this.closeModal} />
+
+        <Profile contactMe={this.contactMe} />
+
+        <Portfolio path="/portfolio" />
       </div>
     );
   }

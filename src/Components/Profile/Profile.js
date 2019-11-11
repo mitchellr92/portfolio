@@ -28,7 +28,6 @@ class Profile extends Component {
             </a>
             <a
               className="button"
-              href="telto:9517418669"
               onClick={this.props.contactMe}
             >
               <i className="fas fa-envelope"></i>
@@ -37,7 +36,7 @@ class Profile extends Component {
               <i className="fas fa-file-download"></i>
             </a>
           </div>
-          <div className="projects">Projects</div>
+          <a className="projects" href="/portfolio" >Projects</a>
         </div>
       </div>
     );
