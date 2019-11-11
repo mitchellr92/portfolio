@@ -2,6 +2,7 @@
   width: 90%;
   /* padding-top: 5%; */
   margin-bottom: 5%;
+  display: none;
 }
 
 .portfolio {
@@ -57,14 +58,10 @@
 }
 
 a:link {
-  color: black;
+  color: steelblue;
   text-decoration: none;
 }
 
-a:visited {
-  color: purple;
-  text-decoration: none;
-}
 
 .repo-link:hover {
   text-decoration: underline;
