@@ -13,7 +13,7 @@
 }
 
 p {
-  color: steelblue;
+  color: #0080ff;
   font-size: 1.8rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -33,7 +33,7 @@ p {
 }
 
 .button {
-  color: steelblue;
+  color: #0080ff;
   margin-left: 7%;
   font-size: 1.9rem;
 }
@@ -44,7 +44,7 @@ p {
 }
 
 .projects {
-  color: steelblue;
+  color: #0080ff;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.6rem;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Profile.css";
 
 class Profile extends Component {
@@ -36,7 +37,7 @@ class Profile extends Component {
               <i className="fas fa-file-download"></i>
             </a>
           </div>
-          <a className="projects" href="/portfolio" >Projects</a>
+          <Link className="projects" to={"/portfolio"} >Projects</Link>
         </div>
       </div>
     );
