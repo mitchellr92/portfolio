@@ -1,68 +1,47 @@
 .portfolio-container {
-  width: 90%;
-  /* padding-top: 5%; */
-  margin-bottom: 5%;
-  /* display: none; */
-}
-
-.portfolio {
+  border: 1px solid red;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 5%;
 }
 
 .project {
-  border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
+  background-color: #222222;
+  border-radius: 15px;
   display: flex;
-  justify-content: space-evenly;
-  width: 90%;
-  margin: 2% auto;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  margin: auto;
+  margin-bottom: 45px;
+  padding-top: 15px;
+  color: #0080ff;
+  font-size: 1.6rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.project2 {
-  border-top: 1px solid grey;
-  border-right: 1px solid grey;
-  display: flex;
-  justify-content: space-evenly;
-  width: 90%;
-  margin: 2% auto;
-  flex-direction: row-reverse;
-}
-
-.project-info {
-  width: 50%;
-}
-
-.project-info h2 {
-  text-decoration: none;
+.project:hover {
+  cursor: pointer;
 }
 
 .project-image {
-  max-width: 35%;
+  border-radius: 5px;
+  max-width: 45%;
   max-height: 225px;
-  margin: 1%;
+  margin-top: 5%;
   box-shadow: 10px 10px 5px black;
   width: auto;
   height: auto;
 }
 
 .project-image2 {
-  max-width: 40%;
+  border-radius: 5px;
+  max-width: 55%;
   max-height: 225px;
-  margin: 1%;
+  margin-top: 5%;
   box-shadow: 10px 10px 5px black;
   width: auto;
   height: auto;
-}
-
-a:link {
-  color: steelblue;
-  text-decoration: none;
-}
-
-
-.repo-link:hover {
-  text-decoration: underline;
 }

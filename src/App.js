@@ -39,7 +39,7 @@ class App extends Component {
           render={props => <Profile contactMe={this.contactMe} />}
         />
 
-        <Route path="/portfolio" component={Portfolio} />
+        <Route exact path="/portfolio" component={Portfolio} />
       </div>
     );
   }
