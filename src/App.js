@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
 import "./App.css";
 
 import Portfolio from "./Components/Portfolio/Portfolio";
@@ -25,11 +26,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Modal display={this.state.display} closeModal={this.closeModal} />
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <Modal display={this.state.display} closeModal={this.closeModal} />
+          )}
+        />
+        <Route
+          exact
+          path="/"
+          render={props => <Profile contactMe={this.contactMe} />}
+        />
 
-        <Profile contactMe={this.contactMe} />
-
-        <Portfolio path="/portfolio" />
+        <Route exact path="/portfolio" component={Portfolio} />
       </div>
     );
   }

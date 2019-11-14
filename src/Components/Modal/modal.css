@@ -4,8 +4,8 @@
   margin-left: 7%;
   margin-top: 8%;
   padding: 1%;
-  width: 620px;
-  height: 65vh;
+  width: 650px;
+  height: 520px;
   z-index: 2;
   position: absolute;
   background-color: #222222;
@@ -19,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 25px 0 25px;
-  color: steelblue;
+  color: #0080ff;
   font-size: 2.1rem;
 }
 
@@ -30,7 +30,7 @@
 
 .close-button:hover {
   cursor: pointer;
-  color: steelblue;
+  color: #0080ff;
 }
 
 .send-message {
@@ -75,8 +75,8 @@ textarea {
 
 .send-button:hover {
   cursor: pointer;
-  color: steelblue;
-  border-color: steelblue;
+  color: #0080ff;
+  border-color: #0080ff;
 }
 
 .contact {
@@ -86,7 +86,7 @@ textarea {
 .contact,
 .email,
 .phone {
-  color: steelblue;
+  color: #0080ff;
   display: flex;
   align-items: baseline;
   font-size: 1.6rem;
@@ -94,8 +94,13 @@ textarea {
 }
 
 a {
-  color: steelblue;
+  color: #0080ff;
   margin-left: 5px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 500px) {
@@ -113,7 +118,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: steelblue;
+    color: #0080ff;
     font-size: 2.1rem;
   }
 
@@ -147,7 +152,7 @@ a {
   .contact,
   .email,
   .phone {
-    color: steelblue;
+    color: #0080ff;
     display: flex;
     align-items: baseline;
     font-size: 1.6rem;
