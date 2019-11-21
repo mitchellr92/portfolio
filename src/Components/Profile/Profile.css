@@ -13,20 +13,23 @@
   width: 75%;
 }
 
-.name {
-  font-size: 2.1rem;
-}
-
-p {
+.title,
+.name,
+.divider {
   color: #0080ff;
   font-size: 1.8rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.name {
+  font-size: 2.1rem;
+}
+
 .links {
   border-top: 1px solid grey;
   padding-top: 25px;
+  margin-top: 25px;
   display: flex;
   align-items: center;
 }
@@ -75,18 +78,24 @@ p {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25px
+    margin-bottom: 25px;
   }
 
   .divider {
     display: none;
   }
 
-  p {
+  .title, .name, .divider {
     font-size: 2.2rem;
   }
 
+  .name {
+    font-size: 2.5rem;
+  }
+
   .links {
+    width: 90%;
+    margin: auto;
     flex-direction: column;
   }
 
