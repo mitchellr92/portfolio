@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import screenshot2 from "./screenshot2.png";
 import screenshot3 from "./screenshot3.png";
 import screenshot from "./hauntedhouse.png";
@@ -12,9 +13,9 @@ class Portfolio extends Component {
   dropDown = () => {
     if (this.state.height === "30vh") {
       this.setState({
-        height: "75vh"
+        height: "70vh"
       });
-    } else if (this.state.height === "75vh") {
+    } else if (this.state.height === "70vh") {
       this.setState({
         height: "30vh"
       });
@@ -23,19 +24,23 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <div className="portfolio-container">
-        <div
-          className="project"
-          style={{ height: this.state.height }}
-          onClick={this.dropDown}
-        >
-          Lambda Notes
-          <img
-            src={screenshot2}
-            alt="Project screenshot"
-            className="project-image"
-          />
-          {/* <div className="project-info">
+      <div>
+        <div className="top-bar">
+          <Link className="back-button" to="/">Back</Link>
+          </div>
+        <div className="portfolio-container">
+          <div
+            className="project"
+            // style={{ height: this.state.height }}
+            onClick={this.dropDown}
+          >
+            Lambda Notes
+            <img
+              src={screenshot2}
+              alt="Project screenshot"
+              className="project-image"
+            />
+            {/* <div className="project-info">
               <h2>Lambda Notes</h2>
               <p>
                 App for creating and storing notes along with functionality
@@ -63,20 +68,20 @@ class Portfolio extends Component {
                 <p>Back-end repository</p>
               </a>
             </div> */}
-        </div>
+          </div>
 
-        <div
-          className="project"
-          style={{ height: this.state.height }}
-          onClick={this.dropDown}
-        >
-          RV Nav
-          <img
-            src={screenshot3}
-            alt="Project screenshot"
-            className="project-image2"
-          />
-          {/* <div className="project-info">
+          <div
+            className="project"
+            // style={{ height: this.state.height }}
+            onClick={this.dropDown}
+          >
+            RV Nav
+            <img
+              src={screenshot3}
+              alt="Project screenshot"
+              className="project-image2"
+            />
+            {/* <div className="project-info">
               <a className="rvnav" href="https://www.rvnav.com/">
                 <h2>RV Nav</h2>
               </a>
@@ -115,20 +120,20 @@ class Portfolio extends Component {
                 <p>Back-end repository</p>
               </a>
             </div> */}
-        </div>
+          </div>
 
-        <div
-          className="project"
-          style={{ height: this.state.height }}
-          onClick={this.dropDown}
-        >
-          Haunted House
-          <img
-            src={screenshot}
-            alt="Project screenshot"
-            className="project-image2"
-          />
-          {/* <div className="project-info">
+          <div
+            className="project"
+            // style={{ height: this.state.height }}
+            onClick={this.dropDown}
+          >
+            Haunted House
+            <img
+              src={screenshot}
+              alt="Project screenshot"
+              className="project-image2"
+            />
+            {/* <div className="project-info">
               <a className="hauntedhouse" href="https://spooky-mud.netlify.com/">
                 <h2>Haunted House</h2>
               </a>
@@ -156,6 +161,7 @@ class Portfolio extends Component {
                 <p>Back-end repository</p>
               </a>
             </div> */}
+          </div>
         </div>
       </div>
     );

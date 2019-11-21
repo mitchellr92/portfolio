@@ -1,5 +1,18 @@
+.top-bar {
+  color: #0080ff;
+  background-color: #222222;
+  padding: 15px;
+  font-size: 1.4rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.back-button:hover {
+  text-decoration: none;
+  color: slategray;
+}
+
 .portfolio-container {
-  border: 1px solid red;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -8,22 +21,23 @@
 
 .project {
   background-color: #222222;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 25%;
-  margin: auto;
+  height: 30vh;
+  margin-left: 6%;
   margin-bottom: 45px;
   padding-top: 15px;
   color: #0080ff;
   font-size: 1.6rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.project:hover {
-  cursor: pointer;
+  }
+  
+  .project:hover {
+    height: 70vh;
 }
 
 .project-image {
@@ -44,4 +58,22 @@
   box-shadow: 10px 10px 5px black;
   width: auto;
   height: auto;
+}
+
+@media (max-width: 1050px) {
+  .portfolio-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 55%;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .project {
+    width: 75%;
+  }
 }

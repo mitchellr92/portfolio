@@ -65,7 +65,7 @@ p {
   text-decoration: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 720px) {
   .profile-container {
     width: 100%;
     margin-left: 0;
