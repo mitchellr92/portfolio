@@ -23,53 +23,34 @@ export class LambdaNotes extends Component {
           alt="Project screenshot"
           className="project-image"
         />
+        <div className={this.state.active ? "active-text" : "null"}>
+          <p>
+            App for creating and storing notes along with functionality allowing
+            you to both delete and edit your notes.
+          </p>
+          <p>React, axios, json, CSS, NodeJS, express, knex</p>
+          <p>
+            Built out both the front-end and back-end to communicate with each
+            other and carry out complete CRUD functionality.
+          </p>
+        </div>
+        <div className="repositories">
+          <a
+            href="https://github.com/mitchellr92/front-end-project-week"
+            target="_blank"
+          >
+            Front-end repository
+          </a>
+          <a
+            href="https://github.com/mitchellr92/back-end-project-week"
+            target="_blank"
+          >
+            Back-end repository
+          </a>
+        </div>
       </div>
     );
   }
-}
-
-{
-  /* <div
-            className="project"
-            onClick={this.click}
-          >
-            Lambda Notes
-            <img
-              src={screenshot2}
-              alt="Project screenshot"
-              className="project-image"
-            />
-            {/* <div className="project-info">
-              <h2>Lambda Notes</h2>
-              <p>
-                App for creating and storing notes along with functionality
-                allowing you to both delete and edit your notes.
-              </p>
-              <p>
-                Built using - React, axios, json, CSS, NodeJS, express, knex
-              </p>
-              <ul>
-                <li>
-                  Built out both the front-end and back-end to communicate with
-                  each other and carry out complete CRUD functionality.
-                </li>
-              </ul>
-              <a
-                className="repo-link"
-                href="https://github.com/mitchellr92/front-end-project-week"
-              >
-                <p>Front-end repository</p>
-              </a>
-              <a
-                className="repo-link"
-                href="https://github.com/mitchellr92/back-end-project-week"
-              >
-                <p>Back-end repository</p>
-              </a>
-            </div> */
-}
-{
-  /* </div> */
 }
 
 export default LambdaNotes;

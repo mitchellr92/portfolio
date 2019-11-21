@@ -19,14 +19,16 @@
   padding-top: 5%;
 }
 
-.project, .active-project {
+.project,
+.active-project {
   background-color: #222222;
   border-radius: 10px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 25%;
-  height: 30vh;
+  height: 35vh;
   margin-left: 6%;
   margin-bottom: 45px;
   padding-top: 15px;
@@ -34,15 +36,41 @@
   font-size: 1.6rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  }
+}
 
-  .active-project {
-    height: 75vh;
-  }
-  
-  .project:hover {
-    cursor: pointer;
-    /* height: 70vh; */
+.active-project {
+  height: 75vh;
+}
+
+.null {
+  display: none;
+}
+
+.active-text {
+  padding: 4%;
+  height: 47vh;
+}
+
+p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: darkgray;
+}
+
+.repositories {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 15px;
+}
+
+.repositories a {
+  font-size: 1.2rem;
+}
+
+.project:hover,
+.active-project:hover {
+  cursor: pointer;
 }
 
 .project-image {
@@ -65,20 +93,30 @@
   height: auto;
 }
 
-@media (max-width: 1050px) {
-  .portfolio-container{
+@media (max-width: 1200px) {
+  .portfolio-container {
     flex-direction: column;
     align-items: center;
   }
 
   .project {
+    height: 45vh;
+  }
+
+  .project,
+  .active-project {
     width: 55%;
   }
 
+  p {
+    font-size: 1.0rem;
+  }
 }
 
 @media (max-width: 720px) {
-  .project {
+
+  .project,
+  .active-project {
     width: 75%;
   }
 }
