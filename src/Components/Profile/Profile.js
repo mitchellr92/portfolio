@@ -3,6 +3,18 @@ import { Link } from "react-router-dom";
 import "./Profile.css";
 
 class Profile extends Component {
+  state = {
+    resumeButton: "none"
+  };
+
+  resumeDownload = () => {
+    if (this.state.resumeButton === "none") {
+      this.setState({ resumeButton: "flex" });
+    } else if (this.state.resumeButton === "flex") {
+      this.setState({ resumeButton: "none" });
+    }
+  };
+
   render() {
     console.log(this.props.contactMe);
     return (
@@ -30,15 +42,18 @@ class Profile extends Component {
             </a>
             <a
               className="button"
-              onClick={this.props.contactMe}
+              target="_blank"
+              href="https://resume.creddle.io/resume/3h5u0hc5mbd"
             >
+              <i className="fas fa-file"></i>
+            </a>
+            <a className="button" onClick={this.props.contactMe}>
               <i className="fas fa-envelope"></i>
             </a>
-            <a className="button" href="./resume.pdf" download>
-              <i className="fas fa-file-download"></i>
-            </a>
           </div>
-          <Link className="projects" to={"/portfolio"} >Projects</Link>
+          <Link className="projects" to={"/portfolio"}>
+            Projects
+          </Link>
         </div>
       </div>
     );
