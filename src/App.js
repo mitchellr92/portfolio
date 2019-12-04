@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
+import axios from "axios";
 
 import Portfolio from "./Components/Portfolio/Portfolio";
 import Profile from "./Components/Profile/Profile";
@@ -8,7 +9,18 @@ import Modal from "./Components/Modal/modal";
 
 class App extends Component {
   state = {
-    display: "none"
+    display: "none",
+    messages: []
+  };
+
+  newMessage = message => {
+    axios
+      .post(`http://localhost:1234/api/message`, message)
+      .then(response => {
+        this.setState({ messages: response.data });
+        console.log('message sent!')
+      })
+      .catch(error => console.log("error!"));
   };
 
   contactMe = () => {
@@ -30,7 +42,11 @@ class App extends Component {
           exact
           path="/"
           render={props => (
-            <Modal display={this.state.display} closeModal={this.closeModal} />
+            <Modal
+              display={this.state.display}
+              closeModal={this.closeModal}
+              newMessage={this.newMessage}
+            />
           )}
         />
         <Route
