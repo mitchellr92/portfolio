@@ -60,6 +60,12 @@ textarea {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.send {
+  display: flex;
+  justify-content: space-between;
+
+}
+
 .send-button {
   width: 175px;
   height: 40px;
@@ -77,6 +83,11 @@ textarea {
   cursor: pointer;
   color: #0080ff;
   border-color: #0080ff;
+}
+
+.response {
+  color: #0080ff;
+  width: 60%;
 }
 
 .contact {

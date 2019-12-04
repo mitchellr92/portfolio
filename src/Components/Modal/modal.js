@@ -9,7 +9,8 @@ export class Modal extends Component {
       messages: [],
       name: "",
       email: "",
-      message: ""
+      message: "",
+      send: "none"
     };
   }
 
@@ -26,7 +27,8 @@ export class Modal extends Component {
     this.setState({
       name: "",
       email: "",
-      message: ""
+      message: "",
+      send: "flex"
     });
   };
 
@@ -71,7 +73,15 @@ export class Modal extends Component {
             value={this.state.message}
           ></textarea>
         </div>
-        <p className="send-button" onClick={this.addMessage}>Send</p>
+        <div className="send">
+          <p className="send-button" onClick={this.addMessage}>
+            Send
+          </p>
+          <p className="response" style={{ display: this.state.send }}>
+            Thank you for reaching out! I will be getting back to you as soon as
+            I can.
+          </p>
+        </div>
         <div className="contact">
           <div className="email">
             <i className="fas fa-mobile-alt"> :</i>

@@ -44,6 +44,7 @@ class App extends Component {
           render={props => (
             <Modal
               display={this.state.display}
+              send={this.state.send}
               closeModal={this.closeModal}
               newMessage={this.newMessage}
             />
