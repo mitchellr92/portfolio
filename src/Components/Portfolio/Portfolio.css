@@ -49,11 +49,15 @@
 .active-text {
   padding: 4%;
   height: 47vh;
+  max-height: 275px;
 }
 
-p {
+.active-text p {
   margin: 0;
-  font-size: 1.2rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 1.25vw;
   color: darkgray;
 }
 
@@ -108,8 +112,8 @@ p {
     width: 55%;
   }
 
-  p {
-    font-size: 1.0rem;
+  .active-text p {
+    font-size: 1.5vw;
   }
 }
 
@@ -118,5 +122,9 @@ p {
   .project,
   .active-project {
     width: 75%;
+  }
+
+    .active-text p {
+    font-size: 2.5vw;
   }
 }
