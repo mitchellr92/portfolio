@@ -13,6 +13,10 @@
   width: 75%;
 }
 
+.profile p {
+  margin: 0;
+}
+
 .title,
 .name,
 .divider {
