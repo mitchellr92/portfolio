@@ -15,7 +15,7 @@ class App extends Component {
 
   newMessage = message => {
     axios
-      .post(`http://localhost:1234/api/message`, message)
+      .post(`https://mitchellrobles-backend.herokuapp.com/api/message`, message)
       .then(response => {
         this.setState({ messages: response.data });
         console.log('message sent!')
