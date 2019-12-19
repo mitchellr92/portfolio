@@ -39,7 +39,7 @@ export class RvNav extends Component {
             information according to user input. Used the Redux store to manage
             the state between the different forms.
           </p>
-          <div onClick={this.toggleActive}>
+          <div onClick={this.toggleActive} className="up-arrow">
             <i class="fas fa-angle-double-up"></i>
           </div>
         </div>
