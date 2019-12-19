@@ -15,7 +15,6 @@ export class LambdaNotes extends Component {
     return (
       <div
         className={this.state.active ? "active-project" : "project"}
-        onClick={this.toggleActive}
       >
         Lambda Notes
         <img
@@ -23,7 +22,7 @@ export class LambdaNotes extends Component {
           alt="Project screenshot"
           className="project-image"
         />
-        <div className={this.state.active ? "null" : "active-text"}>
+        <div className={this.state.active ? "null" : "active-text"} onClick={this.toggleActive}>
           <i class="fas fa-angle-double-down"></i>
         </div>
         <div className={this.state.active ? "active-text" : "null"}>
@@ -36,7 +35,7 @@ export class LambdaNotes extends Component {
             Built out both the front-end and back-end to communicate with each
             other and carry out complete CRUD functionality.
           </p>
-          <div>
+          <div onClick={this.toggleActive}>
             <i class="fas fa-angle-double-up"></i>
           </div>
         </div>
