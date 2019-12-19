@@ -28,7 +28,7 @@
   flex-direction: column;
   align-items: center;
   width: 25%;
-  height: 35vh;
+  height: 40vh;
   margin-left: 6%;
   margin-bottom: 45px;
   padding-top: 15px;
@@ -39,11 +39,23 @@
 }
 
 .active-project {
-  height: 75vh;
+  height: 85vh;
 }
 
 .null {
   display: none;
+}
+
+.fas {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.fa-angle-double-up {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  margin: auto;
 }
 
 .active-text {
@@ -70,11 +82,6 @@
 
 .repositories a {
   font-size: 1.2rem;
-}
-
-.project:hover,
-.active-project:hover {
-  cursor: pointer;
 }
 
 .project-image {
