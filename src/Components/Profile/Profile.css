@@ -5,8 +5,8 @@
 
 .profile-container {
   margin-left: 7%;
-  margin-top: 10%;
-  width: 650px;
+  margin-top: 12%;
+  width: 725px;
   z-index: 1;
 }
 
@@ -48,6 +48,24 @@
   justify-content: flex-end;
 }
 
+@-moz-keyframes spin {
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .button {
   color: #0080ff;
   margin-left: 7%;
@@ -55,8 +73,9 @@
 }
 
 .button:hover {
-  color: slategray;
+  color: lightskyblue;
   cursor: pointer;
+  animation: spin 375ms linear 1;
 }
 
 .download-container {
@@ -79,8 +98,9 @@
 
 .projects:hover {
   cursor: pointer;
-  color: slategray;
+  color: lightskyblue;
   text-decoration: none;
+  animation: spin 500ms linear 1;
 }
 
 .profile-summary {
