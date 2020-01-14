@@ -5,7 +5,8 @@ import "./Profile.css";
 
 class Profile extends Component {
   state = {
-    resumeButton: "none"
+    resumeButton: "none",
+    active: false
   };
 
   resumeDownload = () => {
@@ -14,6 +15,11 @@ class Profile extends Component {
     } else if (this.state.resumeButton === "flex") {
       this.setState({ resumeButton: "none" });
     }
+  };
+
+  toggleActive = () => {
+    const currentState = this.state.active;
+    this.setState({ active: !currentState });
   };
 
   render() {
@@ -25,6 +31,19 @@ class Profile extends Component {
             <p className="name">Mitchell Robles</p>
             <p className="divider">|</p>
             <p className="title">Web Developer</p>
+            <a className="button" onClick={this.toggleActive}>
+              <i class="fas fa-arrow-circle-down"></i>
+            </a>
+          </div>
+          <div className={this.state.active ? "profile-summary" : "null"}>
+            <img src={profilePic} className="profile-pic" />
+            <p>
+              Collaborative Full Stack Web Developer with experience working on
+              multiple distributed cross-functional agile development teams.
+              Built multiple projects using JavaScript, HTML, CSS, and Node.js.
+              7 years’ experience as an Electrician developing attention to
+              detail, critical thinking, and project management skill set.
+            </p>
           </div>
           <div className="links">
             <div className="link-buttons">
@@ -50,10 +69,6 @@ class Profile extends Component {
               Projects
             </Link>
           </div>
-        </div>
-        <div className="profile-summary">
-          <img src={profilePic} className="profile-pic" />
-          <p>Collaborative Full Stack Web Developer with experience working on multiple distributed cross-functional agile development teams. Built multiple projects using JavaScript, HTML, CSS, and Node.js. 7 years’ experience as an Electrician developing attention to detail, critical thinking, and project management skill set.</p>
         </div>
       </div>
     );
