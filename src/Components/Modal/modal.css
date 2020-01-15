@@ -1,6 +1,8 @@
 .contact-container {
   flex-direction: column;
   justify-content: space-around;
+  position: relative;
+  left: -870px;
   margin-left: 7%;
   margin-top: 8%;
   padding: 1%;
@@ -12,6 +14,7 @@
   border-radius: 10px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  animation: slide-right 1000ms forwards;
 }
 
 .modal-title {
@@ -63,7 +66,6 @@ textarea {
 .send {
   display: flex;
   justify-content: space-between;
-
 }
 
 .send-button {
@@ -173,5 +175,11 @@ a:hover {
   a {
     margin-bottom: 15px;
     font-size: 1.2rem;
+  }
+}
+
+@keyframes slide-right {
+  100% {
+    left: 0;
   }
 }

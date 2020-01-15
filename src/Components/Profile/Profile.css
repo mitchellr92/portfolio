@@ -1,6 +1,8 @@
 .page-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .profile-container {
@@ -15,6 +17,9 @@
   justify-content: space-between;
   align-items: baseline;
   width: 75%;
+  position: relative;
+  top: -250px;
+  animation: slide-top 1000ms 250ms forwards;
 }
 
 .profile p {
@@ -34,36 +39,27 @@
   font-size: 2.1rem;
 }
 
-.links {
+.border-divider {
+  border: none;
   border-top: 1px solid grey;
-  padding-top: 25px;
-  margin-top: 25px;
+  margin: 25px 0;
+  position: relative;
+  left: -850px;
+  animation: slide-right 1000ms 1250ms forwards;
+}
+
+.links {
   display: flex;
   align-items: center;
+  position: relative;
+  bottom: -550px;
+  animation: slide-bottom 1000ms 750ms forwards;
 }
 
 .link-buttons {
   width: 75%;
   display: flex;
   justify-content: flex-end;
-}
-
-@-moz-keyframes spin {
-  to {
-    -moz-transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes spin {
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .button {
@@ -76,6 +72,15 @@
   color: lightskyblue;
   cursor: pointer;
   animation: spin 375ms linear 1;
+}
+
+.up-arrow {
+  animation: half-spin 300ms linear 1;
+}
+
+.up-arrow:hover {
+  /* border: 1px solid red; */
+  animation: spin 300ms linear 1;
 }
 
 .download-container {
@@ -103,15 +108,6 @@
   animation: spin 500ms linear 1;
 }
 
-.profile-summary {
-  margin-top: 5%;
-  margin-left: 7%;
-  max-width: 650px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 .profile-summary p {
   color: gainsboro;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -122,6 +118,18 @@
   margin-right: 35px;
   border-radius: 50%;
   width: 25%;
+}
+
+.profile-summary {
+  margin-top: 5%;
+  margin-left: 7%;
+  max-width: 650px;
+  height: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  animation-name: height;
+  animation-duration: 400ms;
 }
 
 @media (max-width: 720px) {
@@ -191,5 +199,64 @@
     flex-direction: column;
     margin: 35px auto;
     width: 90%;
+  }
+}
+
+@-moz-keyframes spin {
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes height {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 200px;
+  }
+}
+@-webkit-keyframes height {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 200px;
+  }
+}
+@-moz-keyframes height {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+@keyframes slide-right {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide-top {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes slide-bottom {
+  100% {
+    bottom: 0;
   }
 }
