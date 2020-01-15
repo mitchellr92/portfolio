@@ -18,8 +18,8 @@
   align-items: baseline;
   width: 75%;
   position: relative;
-  top: -250px;
-  animation: slide-top 1000ms 250ms forwards;
+  top: -500px;
+  animation: slide-top 1000ms 400ms forwards;
 }
 
 .profile p {
@@ -45,15 +45,15 @@
   margin: 25px 0;
   position: relative;
   left: -850px;
-  animation: slide-right 1000ms 1250ms forwards;
+  animation: slide-right 1000ms 1750ms forwards;
 }
 
 .links {
   display: flex;
   align-items: center;
   position: relative;
-  bottom: -550px;
-  animation: slide-bottom 1000ms 750ms forwards;
+  bottom: -800px;
+  animation: slide-bottom 1000ms 900ms forwards;
 }
 
 .link-buttons {
@@ -108,28 +108,118 @@
   animation: spin 500ms linear 1;
 }
 
+.profile-summary {
+  background-color: rgb(128, 128, 128, 0.35);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 2%;
+  padding-bottom: 35px;
+  margin: auto;
+  margin-top: 25px;
+  max-width: 650px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation-name: height;
+  animation-duration: 400ms;
+}
+
+.collapsed-profile-summary {
+  visibility: collapse;
+  height: 0px;
+  animation: collapse 400ms forwards;
+}
+
 .profile-summary p {
   color: gainsboro;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 .profile-pic {
   margin-right: 35px;
   border-radius: 50%;
   width: 25%;
 }
-
-.profile-summary {
-  margin-top: 5%;
-  margin-left: 7%;
-  max-width: 650px;
-  height: 200px;
+.summary {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   animation-name: height;
   animation-duration: 400ms;
+}
+
+.skills {
+  opacity: 1;
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.fa-skill {
+  font-size: 2.6rem;
+}
+
+.fa-js-square {
+  position: relative;
+  right: -2000px;
+  color: #f1d63b;
+  animation: slide-left 1000ms 250ms forwards;
+  text-shadow: 2px 2px 4px #000000;
+}
+.fa-react {
+  position: relative;
+  right: -2000px;
+  color: #00d2f8;
+  animation: slide-left 1000ms 300ms forwards;
+  text-shadow: 2px 2px 4px #000000;
+}
+.fa-node-js {
+  position: relative;
+  right: -2000px;
+  color: #90ce41;
+  animation: slide-left 1000ms 350ms forwards;
+  text-shadow: 2px 2px 4px #000000;
+}
+.fa-html5 {
+  position: relative;
+  right: -2000px;
+  color: #e4522a;
+  animation: slide-left 1000ms 400ms forwards;
+  text-shadow: 2px 2px 4px #000000;
+}
+.fa-css3 {
+  position: relative;
+  right: -2000px;
+  color: #2092ec;
+  animation: slide-left 1000ms 450ms forwards;
+  text-shadow: 2px 2px 4px #000000;
+}
+.fa-sass {
+  position: relative;
+  right: -2000px;
+  color: #cb729f;
+  animation: slide-left 1000ms 500ms forwards;
+  text-shadow: 2px 2px 4px #000000;
+}
+.fa-less {
+  position: relative;
+  right: -2000px;
+  color: #1d3f6c;
+  animation: slide-left 1000ms 550ms forwards;
+  text-shadow: 2px 2px 4px #000000;
+}
+.fa-python {
+  position: relative;
+  right: -2000px;
+  color: #5facef;
+  animation: slide-left 1000ms 600ms forwards;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 @media (max-width: 720px) {
@@ -243,9 +333,43 @@
   }
 }
 
+@keyframes collapse {
+  from {
+    height: 200px;
+  }
+  to {
+    height: 0px;
+    display: none;
+  }
+}
+@-webkit-keyframes collapse {
+  from {
+    height: 200px;
+  }
+  to {
+    height: 0px;
+    display: none;
+  }
+}
+@-moz-keyframes collapse {
+  from {
+    height: 200px;
+  }
+  to {
+    height: 0px;
+    display: none;
+  }
+}
+
 @keyframes slide-right {
   100% {
     left: 0;
+  }
+}
+
+@keyframes slide-left {
+  100% {
+    right: 0;
   }
 }
 

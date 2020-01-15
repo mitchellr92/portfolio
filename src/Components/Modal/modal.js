@@ -10,7 +10,8 @@ export class Modal extends Component {
       name: "",
       email: "",
       message: "",
-      send: "none"
+      send: "none",
+      display: "none"
     };
   }
 
@@ -32,19 +33,26 @@ export class Modal extends Component {
     });
   };
 
+  clearSendMessage = event => {
+    this.setState({ send: "none" });
+  };
+
   inputHandleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
   render() {
+    console.log("hello", this.state.send);
     return (
       <div
-        className="contact-container"
-        style={{ display: this.props.display }}
+
+        className={
+          this.props.display ? "contact-container" : "null"
+        }
       >
         <div className="modal-title">
           Get In Touch
-          <div className="close-button" onClick={this.props.closeModal}>
+          <div className="close-button" onClick={this.props.closeModal} >
             X
           </div>
         </div>
