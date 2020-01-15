@@ -11,8 +11,18 @@ export class Modal extends Component {
       email: "",
       message: "",
       send: "none",
-      display: "none"
+      display: "none",
+      visibility: "hidden"
     };
+  }
+
+  componentDidMount() {
+    setTimeout(
+      function () {
+        this.setState({ visibility: "visible" });
+      }.bind(this),
+      1200
+    );
   }
 
   addMessage = event => {
@@ -46,7 +56,7 @@ export class Modal extends Component {
             ? "contact-container"
             : "contact-container collapse"
         }
-        style={{ visibility: this.props.visible }}
+        style={{ visibility: this.state.visibility }}
       >
         <div className="modal-title">
           Get In Touch

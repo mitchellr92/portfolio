@@ -10,18 +10,8 @@ import Modal from "./Components/Modal/modal";
 class App extends Component {
   state = {
     display: false,
-    visibility: "hidden",
     messages: []
   };
-
-  componentDidMount() {
-    setTimeout(
-      function() {
-        this.setState({ visibility: "visible" });
-      }.bind(this),
-      1200
-    );
-  }
 
   newMessage = message => {
     axios
