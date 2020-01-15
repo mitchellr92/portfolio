@@ -9,7 +9,7 @@ import Modal from "./Components/Modal/modal";
 
 class App extends Component {
   state = {
-    display: "none",
+    display: false,
     messages: []
   };
 
@@ -24,14 +24,14 @@ class App extends Component {
   };
 
   contactMe = () => {
-    if (this.state.display === "none") {
-      this.setState({ display: "flex" });
+    if (this.state.display === false) {
+      this.setState({ display: true });
     }
   };
 
   closeModal = () => {
-    if (this.state.display === "flex") {
-      this.setState({ display: "none" });
+    if (this.state.display === true) {
+      this.setState({ display: false });
     }
   };
 
@@ -44,7 +44,6 @@ class App extends Component {
           render={props => (
             <Modal
               display={this.state.display}
-              send={this.state.send}
               closeModal={this.closeModal}
               newMessage={this.newMessage}
             />
