@@ -19,7 +19,7 @@
   width: 75%;
   position: relative;
   top: -250px;
-  animation: slide-top 1000ms 250ms forwards;
+  animation: slide-top 1000ms 500ms forwards;
 }
 
 .profile p {
@@ -45,7 +45,7 @@
   margin: 25px 0;
   position: relative;
   left: -850px;
-  animation: slide-right 1000ms 1250ms forwards;
+  animation: slide-right 1000ms 1500ms forwards;
 }
 
 .links {
@@ -53,7 +53,7 @@
   align-items: center;
   position: relative;
   bottom: -550px;
-  animation: slide-bottom 1000ms 750ms forwards;
+  animation: slide-bottom 1000ms 1000ms forwards;
 }
 
 .link-buttons {
@@ -121,15 +121,79 @@
 }
 
 .profile-summary {
-  margin-top: 5%;
+  margin-top: 25px;
+  padding-bottom: 25px;
   margin-left: 7%;
   max-width: 650px;
   height: 200px;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation-name: height;
+  animation-duration: 400ms;
+}
+
+.summary {
+  display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   animation-name: height;
   animation-duration: 400ms;
+}
+
+.skills {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.fa-skill {
+  font-size: 2.6rem;
+}
+
+.fa-js-square {
+  position: relative;
+  right: -1350px;
+  animation: slide-left 1000ms 600ms forwards;
+}
+.fa-css3 {
+  position: relative;
+  right: -1350px;
+  animation: slide-left 1000ms 650ms forwards;
+}
+.fa-html5 {
+  position: relative;
+  right: -1350px;
+  animation: slide-left 1000ms 700ms forwards;
+}
+.fa-node-js {
+  position: relative;
+  right: -1350px;
+  animation: slide-left 1000ms 750ms forwards;
+}
+.fa-react {
+  position: relative;
+  right: -1350px;
+  animation: slide-left 1000ms 800ms forwards;
+}
+.fa-sass {
+  position: relative;
+  right: -1350px;
+  animation: slide-left 1000ms 850ms forwards;
+}
+.fa-python {
+  position: relative;
+  right: -1350px;
+  animation: slide-left 1000ms 900ms forwards;
+}
+.fa-less {
+  position: relative;
+  right: -1350px;
+  animation: slide-left 1000ms 950ms forwards;
 }
 
 @media (max-width: 720px) {
@@ -246,6 +310,12 @@
 @keyframes slide-right {
   100% {
     left: 0;
+  }
+}
+
+@keyframes slide-left {
+  100% {
+    right: 0;
   }
 }
 
