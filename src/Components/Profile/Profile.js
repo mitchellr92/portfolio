@@ -31,8 +31,11 @@ class Profile extends Component {
             <p className="name">Mitchell Robles</p>
             <p className="divider">|</p>
             <p className="title">Web Developer</p>
-            <a className="button" onClick={this.toggleActive}>
+            <a className={this.state.active ? "null" : "button down-arrow"} onClick={this.toggleActive}>
               <i class="fas fa-arrow-circle-down"></i>
+            </a>
+            <a className={this.state.active ? "button down-arrow" : "null"} onClick={this.toggleActive}>
+              <i class="fas fa-arrow-circle-up"></i>
             </a>
           </div>
           <div className={this.state.active ? "profile-summary" : "null"}>
@@ -45,6 +48,7 @@ class Profile extends Component {
               detail, critical thinking, and project management skill set.
             </p>
           </div>
+          <hr className="border-divider"/>
           <div className="links">
             <div className="link-buttons">
               <a
