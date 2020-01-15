@@ -9,6 +9,8 @@ class Profile extends Component {
     active: false
   };
 
+
+
   resumeDownload = () => {
     if (this.state.resumeButton === "none") {
       this.setState({ resumeButton: "flex" });

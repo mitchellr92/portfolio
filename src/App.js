@@ -18,7 +18,7 @@ class App extends Component {
       .post(`https://mitchellrobles-backend.herokuapp.com/api/message`, message)
       .then(response => {
         this.setState({ messages: response.data });
-        console.log('message sent!')
+        console.log("message sent!");
       })
       .catch(error => console.log("error!"));
   };
@@ -43,6 +43,7 @@ class App extends Component {
           path="/"
           render={props => (
             <Modal
+              visible={this.state.visibility}
               display={this.state.display}
               closeModal={this.closeModal}
               newMessage={this.newMessage}
@@ -52,7 +53,12 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={props => <Profile contactMe={this.contactMe} />}
+          render={props => (
+            <Profile
+              contactMe={this.contactMe}
+              visibility={this.state.visibility}
+            />
+          )}
         />
 
         <Route exact path="/portfolio" component={Portfolio} />
