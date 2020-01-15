@@ -18,25 +18,11 @@
   animation: slide-right 1000ms forwards;
 }
 
-/* .hidden-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  left: -1000px;
-  margin-left: 7%;
-  margin-top: 8%;
-  padding: 1%;
-  width: 725px;
-  height: 520px;
-  z-index: 2;
+.collapse {
   position: absolute;
-  background-color: #222222;
-  border-radius: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  animation: slide-left-off 1000ms forwards;
-} */
+  left: -1000px;
+  animation: slide-left-off 1000ms;
+}
 
 .modal-title {
   display: flex;

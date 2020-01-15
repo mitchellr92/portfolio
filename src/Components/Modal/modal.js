@@ -33,26 +33,24 @@ export class Modal extends Component {
     });
   };
 
-  clearSendMessage = event => {
-    this.setState({ send: "none" });
-  };
-
   inputHandleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
   render() {
-    console.log("hello", this.state.send);
+    console.log(this.props.visible);
     return (
       <div
-
         className={
-          this.props.display ? "contact-container" : "null"
+          this.props.display
+            ? "contact-container"
+            : "contact-container collapse"
         }
+        style={{ visibility: this.props.visible }}
       >
         <div className="modal-title">
           Get In Touch
-          <div className="close-button" onClick={this.props.closeModal} >
+          <div className="close-button" onClick={this.props.closeModal}>
             X
           </div>
         </div>
