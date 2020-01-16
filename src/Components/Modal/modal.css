@@ -1,4 +1,13 @@
-.contact-container {
+.modal-initial {
+  position: relative;
+  left: -1000px;
+  width: 725px;
+  height: 520px;
+  z-index: 2;
+
+}
+
+.modal-visible {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -18,9 +27,7 @@
   animation: slide-right 1000ms forwards;
 }
 
-.collapse {
-  position: absolute;
-  left: -1000px;
+.hidden {
   animation: slide-left-off 1000ms;
 }
 
