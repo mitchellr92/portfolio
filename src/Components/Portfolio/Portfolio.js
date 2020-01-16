@@ -5,17 +5,59 @@ import HauntedHouse from "./Projects/hauntedHouse";
 import "./Portfolio.css";
 
 class Portfolio extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visibility: "hidden"
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(
+      function() {
+        this.setState({ visibility: "visible" });
+      }.bind(this),
+      3000
+    );
+  }
+
   render() {
+    console.log(this.props);
     return (
-      <div className="portfolio-container">
-        <a className="drop-down" onClick={this.props.closePortfolio}>
-          <i class="fas fa-arrow-circle-down down-button"></i>
+      <div
+        className={
+          this.props.display
+            ? "portfolio-container"
+            : "portfolio-container portfolio-collapse"
+        }
+        style={{ visibility: this.state.visibility }}
+      >
+        <a
+          className={
+            this.props.display ? "back-button" : "back-button hidden-button"
+          }
+          onClick={this.props.closePortfolio}
+        >
+          <i
+            class={
+              this.props.display
+                ? "fas fa-arrow-circle-right right-arrow"
+                : "fas fa-arrow-circle-right hidden-right-arrow"
+            }
+          ></i>
         </a>
-        <div className="portfolio-projects">
+        <div
+          className={
+            this.props.display
+              ? "portfolio-projects"
+              : "portfolio-projects hidden"
+          }
+        >
           <div className="top-row">
-            <LambdaNotes className="project project-1" />
-            <RvNav className="project project-2" />
-            <HauntedHouse className="project project-3" />
+            <LambdaNotes className="project-card project-1" />
+            <RvNav className="project-card project-2" />
+            <HauntedHouse className="project-card project-3" />
           </div>
         </div>
       </div>

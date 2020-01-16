@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+// import { Route } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
 
@@ -51,40 +51,39 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Route
+        {/* <Route
           exact
           path="/"
           render={props => (
+            )}
+        /> */}
             <Modal
-              visible={this.state.visibility}
               display={this.state.modal}
               closeModal={this.closeModal}
               newMessage={this.newMessage}
             />
-          )}
-        />
-        <Route
+        {/* <Route
           exact
           path="/"
           render={props => (
+            )}
+        /> */}
             <Profile
+              className="profile-root"
               openModal={this.openModal}
               openPortfolio={this.openPortfolio}
             />
-          )}
-        />
-        <Route
+        {/* <Route
           exact
           path="/"
           render={props => (
+            )}
+        /> */}
             <Portfolio
-              visible={this.state.visibility}
+              className="portfolio-root"
               display={this.state.portfolio}
-              display={this.state.display}
               closePortfolio={this.closePortfolio}
             />
-          )}
-        />
       </div>
     );
   }
