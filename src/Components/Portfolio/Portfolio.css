@@ -1,22 +1,67 @@
-.top-bar {
-  color: #0080ff;
-  background-color: #222222;
-  padding: 15px;
-  font-size: 1.4rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.back-button:hover {
-  text-decoration: none;
-  color: slategray;
-}
+/* Container */
 
 .portfolio-container {
+  /* border: 1px solid red; */
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   padding-top: 5%;
+}
+
+/* Drop down button */
+
+.back-button {
+  cursor: pointer;
+  position: relative;
+  margin-left: 6.5%;
+  right: -2000px;
+  animation: slide-left 2000ms 1000ms forwards;
+  z-index: 2;
+}
+
+.hidden-button {
+  animation: slide-right-off 2000ms forwards;
+}
+
+.right-arrow {
+  animation: spin 2500ms reverse 1;
+}
+
+.right-arrow:hover {
+  color: lightskyblue;
+}
+
+.hidden-right-arrow {
+  animation: spin-right 1000ms linear 1;
+}
+
+/* Projects */
+.portfolio-projects {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+  right: -2000px;
+  animation: slide-left 1600ms forwards;
+  z-index: 2;
+}
+
+.hidden {
+  animation: slide-right-off 1600ms 1000ms forwards;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .project,
@@ -29,7 +74,6 @@
   align-items: center;
   width: 25%;
   height: 40vh;
-  margin-left: 6%;
   margin-bottom: 45px;
   padding-top: 15px;
   color: #0080ff;
@@ -42,13 +86,8 @@
   height: 85vh;
 }
 
-.null {
-  display: none;
-}
-
 .portfolio-container .fas {
   font-size: 3rem;
-  cursor: pointer;
 }
 
 .fa-angle-double-up {
@@ -56,6 +95,10 @@
   justify-content: center;
   width: 30px;
   margin: auto;
+}
+
+.null {
+  display: none;
 }
 
 .active-text {
@@ -104,6 +147,8 @@
   height: auto;
 }
 
+/* Break points */
+
 @media (max-width: 1200px) {
   .portfolio-container {
     flex-direction: column;
@@ -125,13 +170,61 @@
 }
 
 @media (max-width: 720px) {
-
   .project,
   .active-project {
     width: 75%;
   }
 
-    .active-text p {
+  .active-text p {
     font-size: 2.5vw;
+  }
+}
+
+/* Animations */
+
+@keyframes slide-left {
+  100% {
+    right: 0;
+  }
+}
+/* @-webkit-keyframes slide-left {
+  100% {
+    right: 80%;
+  }
+}
+@-moz-keyframes slide-left {
+  100% {
+    right: 80%;
+  }
+} */
+
+@keyframes slide-right-off {
+  from {
+    right: 0;
+  }
+  to {
+    right: -2000px;
+  }
+}
+
+@-moz-keyframes spin {
+  to {
+    -moz-transform: rotate(370deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(370deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(370deg);
+  }
+}
+
+@keyframes spin-right {
+  to {
+    transform: rotate(370deg);
   }
 }

@@ -190,8 +190,34 @@ a:hover {
     left: 0;
   }
 }
+@-webkit-keyframes slide-right {
+  100% {
+    left: 0;
+  }
+}
+@-moz-keyframes slide-right {
+  100% {
+    left: 0;
+  }
+}
 
 @keyframes slide-left-off {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1000px;
+  }
+}
+@-webkit-keyframes slide-left-off {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1000px;
+  }
+}
+@-moz-keyframes slide-left-off {
   from {
     left: 0;
   }

@@ -48,7 +48,6 @@ export class Modal extends Component {
   };
 
   render() {
-    console.log(this.props.visible);
     return (
       <div
         className={
