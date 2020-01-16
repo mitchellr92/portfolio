@@ -10,11 +10,31 @@
   overflow: hidden;
 }
 
-.profile-container {
+.profile-initial {
   margin-left: 7%;
   margin-top: 12%;
   width: 725px;
   z-index: 1;
+}
+
+.profile-visible {
+  margin-left: 7%;
+  margin-top: 12%;
+  width: 725px;
+  z-index: 1;
+  position: absolute;
+  top: -1000px;
+  /* bottom: 0; */
+  animation: slide-down 2000ms 1250ms forwards;
+}
+
+.profile-hidden {
+  margin-left: 7%;
+  margin-top: 12%;
+  width: 725px;
+  z-index: 1;
+  position: absolute;
+  animation: slide-up 1700ms forwards;
 }
 
 .profile {
@@ -427,5 +447,23 @@
 @-moz-keyframes slide-bottom {
   100% {
     bottom: 0;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    top: -1000px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    top: 0;
+  }
+  to {
+    top: -1000px;
   }
 }

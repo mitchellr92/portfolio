@@ -27,7 +27,7 @@ class Profile extends Component {
     console.log(this.props.contactMe);
     return (
       <div className="page-container">
-        <div className="profile-container">
+        <div className={this.props.display}>
           <div className="profile">
             <p className="name">Mitchell Robles</p>
             <p className="divider">|</p>

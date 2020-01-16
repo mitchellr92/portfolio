@@ -24,36 +24,32 @@ class Portfolio extends Component {
 
   render() {
     console.log(this.props);
+    let projects;
+    let backButton;
+    let backArrow;
+
+    if (this.props.display === "portfolio-initial") {
+      projects = "projects-initial";
+      backArrow = "back-arrow-initial";
+      backButton = "back-button-initial";
+    } else if (this.props.display === "portfolio-hidden") {
+      projects = "projects-visible projects-hidden";
+      backArrow = "back-arrow-visible arrow-hidden";
+      backButton = "back-button-visible button-hidden";
+    } else if (this.props.display === "portfolio-visible") {
+      projects = "projects-visible";
+      backArrow = "back-arrow-visible";
+      backButton = "back-button-visible";
+    }
+
+    console.log(projects, backArrow);
+
     return (
-      <div
-        className={
-          this.props.display
-            ? "portfolio-container"
-            : "portfolio-container portfolio-collapse"
-        }
-        style={{ visibility: this.state.visibility }}
-      >
-        <a
-          className={
-            this.props.display ? "back-button" : "back-button hidden-button"
-          }
-          onClick={this.props.closePortfolio}
-        >
-          <i
-            class={
-              this.props.display
-                ? "fas fa-arrow-circle-right right-arrow"
-                : "fas fa-arrow-circle-right hidden-right-arrow"
-            }
-          ></i>
+      <div className="portfolio-container">
+        <a className={backButton} onClick={this.props.closePortfolio}>
+          <i className={`fas fa-arrow-circle-right ${backArrow}`}></i>
         </a>
-        <div
-          className={
-            this.props.display
-              ? "portfolio-projects"
-              : "portfolio-projects hidden"
-          }
-        >
+        <div className={projects}>
           <div className="top-row">
             <LambdaNotes className="project-card project-1" />
             <RvNav className="project-card project-2" />

@@ -1,7 +1,6 @@
 /* Container */
 
 .portfolio-container {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -10,51 +9,69 @@
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
-  padding-top: 5%;
+  /* left: -2000px; */
+  padding-top: 2%;
 }
 
 /* Drop down button */
 
-.back-button {
+.back-button-initial {
   cursor: pointer;
   position: relative;
   margin-left: 6.5%;
+  font-size: 3rem;
   right: -2000px;
-  animation: slide-left 2000ms 1000ms forwards;
-  z-index: 2;
 }
 
-.hidden-button {
+.back-button-visible {
+  cursor: pointer;
+  position: relative;
+  right: -2000px;
+  margin-left: 6.5%;
+  font-size: 3rem;
+  animation: slide-left 2000ms 1500ms forwards;
+}
+
+.button-hidden {
   animation: slide-right-off 2000ms forwards;
 }
 
-.right-arrow {
+.back-arrow-visible {
   animation: spin 2500ms reverse 1;
 }
 
-.right-arrow:hover {
+.back-arrow-visible:hover {
   color: lightskyblue;
 }
 
-.hidden-right-arrow {
-  animation: spin-right 1000ms linear 1;
+.arrow-hidden {
+  animation: spin-right 1200ms linear 1;
 }
 
 /* Projects */
-.portfolio-projects {
+.projects-initial {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 75px;
   position: relative;
   right: -2000px;
-  animation: slide-left 1600ms forwards;
+}
+
+.projects-visible {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+  margin-top: 75px;
+  position: relative;
+  right: -2000px;
+  animation: slide-left 1600ms 500ms forwards;
   z-index: 2;
 }
 
-.hidden {
+.projects-hidden {
   animation: slide-right-off 1600ms 1000ms forwards;
 }
 
