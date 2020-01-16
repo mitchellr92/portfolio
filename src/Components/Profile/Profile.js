@@ -60,20 +60,20 @@ class Profile extends Component {
           <hr className="border-divider" />
           <div className="links">
             <div className="link-buttons">
-              <div
+              <a
                 className="button"
                 target="_blank"
                 href="https://github.com/mitchellr92"
               >
                 <i className="fab fa-github" />
-              </div>
-              <div
+              </a>
+              <a
                 className="button"
                 target="_blank"
                 href="https://www.linkedin.com/in/mitchell-robles-aa7980165/"
               >
                 <i className="fab fa-linkedin-in" />
-              </div>
+              </a>
               <div className="button" onClick={this.props.openModal}>
                 <i className="fas fa-envelope"></i>
               </div>
