@@ -11,6 +11,7 @@ class App extends Component {
   state = {
     modal: false,
     portfolio: false,
+    profile: "profile-initial",
     messages: []
   };
 
@@ -40,50 +41,38 @@ class App extends Component {
     if (this.state.portfolio === false) {
       this.setState({ portfolio: true });
     }
+    if (this.state.profile === "profile-visible" || this.state.profile === "profile-initial") {
+      this.setState({ profile: "profile-hidden" });
+    }
   };
 
-  closePortfolio = () => {
+  closePortfolio = e => {
     if (this.state.portfolio === true) {
       this.setState({ portfolio: false });
+    }
+    if (this.state.profile === "profile-hidden"){
+      this.setState({ profile: "profile-visible" });
     }
   };
 
   render() {
     return (
       <div className="App">
-        {/* <Route
-          exact
-          path="/"
-          render={props => (
-            )}
-        /> */}
-            <Modal
-              display={this.state.modal}
-              closeModal={this.closeModal}
-              newMessage={this.newMessage}
-            />
-        {/* <Route
-          exact
-          path="/"
-          render={props => (
-            )}
-        /> */}
-            <Profile
-              className="profile-root"
-              openModal={this.openModal}
-              openPortfolio={this.openPortfolio}
-            />
-        {/* <Route
-          exact
-          path="/"
-          render={props => (
-            )}
-        /> */}
-            <Portfolio
-              className="portfolio-root"
-              display={this.state.portfolio}
-              closePortfolio={this.closePortfolio}
-            />
+        <Modal
+          display={this.state.modal}
+          closeModal={this.closeModal}
+          newMessage={this.newMessage}
+        />
+        <Profile
+          hideProfile={this.hideProfile}
+          display={this.state.profile}
+          openModal={this.openModal}
+          openPortfolio={this.openPortfolio}
+        />
+        <Portfolio
+          display={this.state.portfolio}
+          closePortfolio={this.closePortfolio}
+        />
       </div>
     );
   }

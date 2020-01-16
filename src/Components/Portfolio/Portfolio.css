@@ -11,7 +11,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 /* Drop down button */
@@ -21,7 +21,7 @@
   position: relative;
   margin-left: 6.5%;
   right: -2000px;
-  animation: slide-left 2000ms 1000ms forwards;
+  animation: slide-left 2000ms 1500ms forwards;
   z-index: 2;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .hidden-right-arrow {
-  animation: spin-right 1000ms linear 1;
+  animation: spin-right 1200ms linear 1;
 }
 
 /* Projects */
@@ -47,10 +47,10 @@
   justify-content: space-evenly;
   width: 100%;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 75px;
   position: relative;
   right: -2000px;
-  animation: slide-left 1600ms forwards;
+  animation: slide-left 1600ms 500ms forwards;
   z-index: 2;
 }
 
