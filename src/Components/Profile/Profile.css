@@ -1,3 +1,5 @@
+/* Page container */
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -9,6 +11,8 @@
   left: 0;
   overflow: hidden;
 }
+
+/* Profile container */
 
 .profile-initial {
   margin-left: 7%;
@@ -24,8 +28,7 @@
   z-index: 1;
   position: absolute;
   top: -1000px;
-  /* bottom: 0; */
-  animation: slide-down 2000ms 1250ms forwards;
+  animation: slide-down 2000ms 500ms forwards;
 }
 
 .profile-hidden {
@@ -36,6 +39,8 @@
   position: absolute;
   animation: slide-up 1700ms forwards;
 }
+
+/* Profile */
 
 .profile {
   display: flex;
@@ -73,6 +78,8 @@
   animation: slide-right 1000ms 1750ms forwards;
 }
 
+/* Links */
+
 .links {
   display: flex;
   align-items: center;
@@ -104,7 +111,6 @@
 }
 
 .up-arrow:hover {
-  /* border: 1px solid red; */
   animation: spin 300ms linear 1;
 }
 
@@ -132,6 +138,8 @@
   text-decoration: none;
   animation: spin 500ms linear 1;
 }
+
+/* Profile summary */
 
 .profile-summary {
   background-color: rgb(128, 128, 128, 0.35);
@@ -176,6 +184,8 @@
   animation-name: height;
   animation-duration: 400ms;
 }
+
+/* Skills */
 
 .skills {
   opacity: 1;
@@ -247,6 +257,8 @@
   text-shadow: 2px 2px 4px #000000;
 }
 
+/* Break points */
+
 @media (max-width: 720px) {
   .page-container {
     flex-direction: column-reverse;
@@ -316,6 +328,8 @@
     width: 90%;
   }
 }
+
+/* Animations */
 
 @-moz-keyframes spin {
   to {
@@ -458,8 +472,40 @@
     top: 0;
   }
 }
+@-webkit-keyframes slide-down {
+  from {
+    top: -1000px;
+  }
+  to {
+    top: 0;
+  }
+}
+@-moz-keyframes slide-down {
+  from {
+    top: -1000px;
+  }
+  to {
+    top: 0;
+  }
+}
 
 @keyframes slide-up {
+  from {
+    top: 0;
+  }
+  to {
+    top: -1000px;
+  }
+}
+@-webkit-keyframes slide-up {
+  from {
+    top: 0;
+  }
+  to {
+    top: -1000px;
+  }
+}
+@-moz-keyframes slide-up {
   from {
     top: 0;
   }

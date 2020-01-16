@@ -5,23 +5,6 @@ import HauntedHouse from "./Projects/hauntedHouse";
 import "./Portfolio.css";
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      visibility: "hidden"
-    };
-  }
-
-  componentDidMount() {
-    setTimeout(
-      function() {
-        this.setState({ visibility: "visible" });
-      }.bind(this),
-      3000
-    );
-  }
-
   render() {
     console.log(this.props);
     let projects;
@@ -42,13 +25,11 @@ class Portfolio extends Component {
       backButton = "back-button-visible";
     }
 
-    console.log(projects, backArrow);
-
     return (
       <div className="portfolio-container">
-        <a className={backButton} onClick={this.props.closePortfolio}>
+        <div className={backButton} onClick={this.props.closePortfolio}>
           <i className={`fas fa-arrow-circle-right ${backArrow}`}></i>
-        </a>
+        </div>
         <div className={projects}>
           <div className="top-row">
             <LambdaNotes className="project-card project-1" />
