@@ -9,11 +9,10 @@
   height: 100%;
   position: absolute;
   top: 0;
-  /* left: -2000px; */
   padding-top: 2%;
 }
 
-/* Drop down button */
+/* Back button */
 
 .back-button-initial {
   cursor: pointer;
@@ -26,6 +25,7 @@
 .back-button-visible {
   cursor: pointer;
   position: relative;
+  color: #0080ff;
   right: -2000px;
   margin-left: 6.5%;
   font-size: 3rem;
@@ -33,7 +33,7 @@
 }
 
 .button-hidden {
-  animation: slide-right-off 2000ms forwards;
+  animation: slide-right-off 1000ms forwards;
 }
 
 .back-arrow-visible {
@@ -49,6 +49,7 @@
 }
 
 /* Projects */
+
 .projects-initial {
   display: flex;
   justify-content: space-evenly;
@@ -72,7 +73,9 @@
 }
 
 .projects-hidden {
-  animation: slide-right-off 1600ms 1000ms forwards;
+  position: relative;
+  right: 0;
+  animation: slide-right-off 1500ms 250ms forwards;
 }
 
 .top-row {
@@ -204,18 +207,34 @@
     right: 0;
   }
 }
-/* @-webkit-keyframes slide-left {
+@-webkit-keyframes slide-left {
   100% {
-    right: 80%;
+    right: 0;
   }
 }
 @-moz-keyframes slide-left {
   100% {
-    right: 80%;
+    right: 0;
   }
-} */
+}
 
 @keyframes slide-right-off {
+  from {
+    right: 0;
+  }
+  to {
+    right: -2000px;
+  }
+}
+@-webkit-keyframes slide-right-off {
+  from {
+    right: 0;
+  }
+  to {
+    right: -2000px;
+  }
+}
+@-moz-keyframes slide-right-off {
   from {
     right: 0;
   }
@@ -241,6 +260,16 @@
 }
 
 @keyframes spin-right {
+  to {
+    transform: rotate(370deg);
+  }
+}
+@-webkit-keyframes spin-right {
+  to {
+    transform: rotate(370deg);
+  }
+}
+@-moz-keyframes spin-right {
   to {
     transform: rotate(370deg);
   }

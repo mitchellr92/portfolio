@@ -1,3 +1,5 @@
+/* Modal */
+
 .modal-initial {
   position: relative;
   left: -1000px;
@@ -41,13 +43,14 @@
 }
 
 .close-button {
-  font-size: 1.4rem;
-  color: slategray;
+  color: #0080ff;
+  margin-left: 7%;
+  font-size: 1.9rem;
 }
 
 .close-button:hover {
   cursor: pointer;
-  color: #0080ff;
+  color: lightskyblue;
 }
 
 .send-message {
@@ -130,6 +133,8 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Break points */
+
 @media (max-width: 720px) {
   .contact-container {
     width: 100%;
@@ -140,7 +145,6 @@ a:hover {
   }
 
   .modal-title {
-    /* border: 1px solid red; */
     margin: 25px 10px;
     display: flex;
     justify-content: space-between;
@@ -191,6 +195,8 @@ a:hover {
     font-size: 1.2rem;
   }
 }
+
+/* Animations */
 
 @keyframes slide-right {
   100% {

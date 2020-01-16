@@ -4,18 +4,7 @@ import "./Profile.css";
 
 class Profile extends Component {
   state = {
-    resumeButton: "none",
     active: false
-  };
-
-
-
-  resumeDownload = () => {
-    if (this.state.resumeButton === "none") {
-      this.setState({ resumeButton: "flex" });
-    } else if (this.state.resumeButton === "flex") {
-      this.setState({ resumeButton: "none" });
-    }
   };
 
   toggleActive = () => {
@@ -32,18 +21,18 @@ class Profile extends Component {
             <p className="name">Mitchell Robles</p>
             <p className="divider">|</p>
             <p className="title">Web Developer</p>
-            <a
+            <div
               className={this.state.active ? "null" : "button down-arrow"}
               onClick={this.toggleActive}
             >
               <i class="fas fa-arrow-circle-down"></i>
-            </a>
-            <a
+            </div>
+            <div
               className={this.state.active ? "button down-arrow" : "null"}
               onClick={this.toggleActive}
             >
               <i class="fas fa-arrow-circle-up"></i>
-            </a>
+            </div>
           </div>
           <div className={this.state.active ? "profile-summary" : "collapsed-profile-summary"}>
             <div className={this.state.active ? "summary" : "collapsed-summary"}>
@@ -71,23 +60,23 @@ class Profile extends Component {
           <hr className="border-divider" />
           <div className="links">
             <div className="link-buttons">
-              <a
+              <div
                 className="button"
                 target="_blank"
                 href="https://github.com/mitchellr92"
               >
                 <i className="fab fa-github" />
-              </a>
-              <a
+              </div>
+              <div
                 className="button"
                 target="_blank"
                 href="https://www.linkedin.com/in/mitchell-robles-aa7980165/"
               >
                 <i className="fab fa-linkedin-in" />
-              </a>
-              <a className="button" onClick={this.props.openModal}>
+              </div>
+              <div className="button" onClick={this.props.openModal}>
                 <i className="fas fa-envelope"></i>
-              </a>
+              </div>
             </div>
             <div className="projects" onClick={this.props.openPortfolio}>
               Projects

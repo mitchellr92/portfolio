@@ -11,7 +11,6 @@ export class Modal extends Component {
       email: "",
       message: "",
       send: "none",
-      display: "none",
     };
   }
 
@@ -45,7 +44,7 @@ export class Modal extends Component {
         <div className="modal-title">
           Get In Touch
           <div className="close-button" onClick={this.props.closeModal}>
-            X
+            <i class="fas fa-arrow-circle-left"></i>
           </div>
         </div>
         <div className="send-message">
