@@ -9,7 +9,8 @@ import Modal from "./Components/Modal/modal";
 
 class App extends Component {
   state = {
-    display: false,
+    modal: false,
+    portfolio: false,
     messages: []
   };
 
@@ -23,15 +24,27 @@ class App extends Component {
       .catch(error => console.log("error!"));
   };
 
-  contactMe = () => {
-    if (this.state.display === false) {
-      this.setState({ display: true });
+  openModal = () => {
+    if (this.state.modal === false) {
+      this.setState({ modal: true });
     }
   };
 
   closeModal = () => {
-    if (this.state.display === true) {
-      this.setState({ display: false });
+    if (this.state.modal === true) {
+      this.setState({ modal: false });
+    }
+  };
+
+  openPortfolio = () => {
+    if (this.state.portfolio === false) {
+      this.setState({ portfolio: true });
+    }
+  };
+
+  closePortfolio = () => {
+    if (this.state.portfolio === true) {
+      this.setState({ portfolio: false });
     }
   };
 
@@ -44,7 +57,7 @@ class App extends Component {
           render={props => (
             <Modal
               visible={this.state.visibility}
-              display={this.state.display}
+              display={this.state.modal}
               closeModal={this.closeModal}
               newMessage={this.newMessage}
             />
@@ -55,13 +68,23 @@ class App extends Component {
           path="/"
           render={props => (
             <Profile
-              contactMe={this.contactMe}
-              visibility={this.state.visibility}
+              openModal={this.openModal}
+              openPortfolio={this.openPortfolio}
             />
           )}
         />
-
-        <Route exact path="/portfolio" component={Portfolio} />
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <Portfolio
+              visible={this.state.visibility}
+              display={this.state.portfolio}
+              display={this.state.display}
+              closePortfolio={this.closePortfolio}
+            />
+          )}
+        />
       </div>
     );
   }

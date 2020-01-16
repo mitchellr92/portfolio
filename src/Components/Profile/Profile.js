@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import profilePic from "./download.png";
 import "./Profile.css";
 
@@ -86,13 +85,13 @@ class Profile extends Component {
               >
                 <i className="fab fa-linkedin-in" />
               </a>
-              <a className="button" onClick={this.props.contactMe}>
+              <a className="button" onClick={this.props.openModal}>
                 <i className="fas fa-envelope"></i>
               </a>
             </div>
-            <Link className="projects" to={"/portfolio"}>
+            <div className="projects" onClick={this.props.openPortfolio}>
               Projects
-            </Link>
+            </div>
           </div>
         </div>
       </div>
