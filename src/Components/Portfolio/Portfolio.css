@@ -57,7 +57,7 @@
   margin: auto;
   margin-top: 75px;
   position: relative;
-  /* right: -2000px; */
+  right: -2000px;
 }
 
 .projects-visible {
@@ -181,8 +181,14 @@
   }
 
   .projects-visible {
+    position: absolute;
     margin-top: 100px;
     width: 100%;
+  }
+
+  .back-button-visible {
+    margin: auto;
+    margin-top: 10px;
   }
 
   .top-row {
