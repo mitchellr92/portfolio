@@ -35,9 +35,7 @@ class Profile extends Component {
             </div>
           </div>
           <div className={this.state.active ? "profile-summary" : "collapsed-profile-summary"}>
-            {/* {this.state.active ? "profile-summary" : "collapsed-profile-summary"} */}
             <div className={this.state.active ? "summary" : "collapsed-summary"}>
-              {/* {this.state.active ? "summary" : "collapsed-summary"}> */}
               <img src={profilePic} className="profile-pic" />
               <p>
                 Collaborative Full Stack Web Developer with experience working
@@ -48,8 +46,7 @@ class Profile extends Component {
                 skill set.
               </p>
             </div>
-            <div className={this.state.active ? "skills" : "null"}>
-              {/* {this.state.active ? "skills" : "null"}> */}
+            <div className={this.state.active ? "skills" : "skills-collapse"}>
               <div className="row-1">
                 <i class="fab fa-skill fa-js-square"></i>
                 <i class="fab fa-skill fa-react"></i>
@@ -90,6 +87,7 @@ class Profile extends Component {
             </div>
           </div>
         </div>
+        {/* <div className="box">Hello, there.</div> */}
       </div>
     );
   }
