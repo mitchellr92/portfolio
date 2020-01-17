@@ -144,8 +144,12 @@ a:hover {
     border-radius: 0;
   }
 
+  .close-button {
+    font-size: 3rem;
+  }
+
   .modal-title {
-    margin: 25px 10px;
+    margin: 25px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,7 +158,7 @@ a:hover {
   }
 
   .send-message {
-    margin: 0 10px;
+    margin: 0 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -171,12 +175,12 @@ a:hover {
   }
 
   .send-button {
-    margin: auto;
+    margin: 0 30px;
     width: 93%;
   }
 
   .contact {
-    margin: 25px 15px;
+    margin: 25px 30px;
     flex-direction: column;
   }
 
