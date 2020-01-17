@@ -1,3 +1,22 @@
+/* .box {
+  display: flex;
+  border: 1px solid red;
+  width: 150px;
+  z-index: 5;
+  position: relative;
+  margin: auto;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
+
+.box:hover {
+  background: green;
+  cursor: pointer;
+  max-height: 150px;
+  transition: max-height .0.5s ease-in;
+} */
+
 /* Page container */
 
 .page-container {
@@ -28,7 +47,7 @@
   width: 725px;
   z-index: 1;
   position: absolute;
-  top: -1000px;
+  top: -1200px;
   animation: slide-down 2000ms 500ms forwards;
 }
 
@@ -49,6 +68,7 @@
   align-items: baseline;
   width: 75%;
   position: relative;
+  /* margin-bottom: 25px; */
   top: -500px;
   animation: slide-top 1000ms 400ms forwards;
 }
@@ -73,7 +93,8 @@
 .border-divider {
   border: none;
   border-top: 1px solid grey;
-  margin: 25px 0;
+  margin-bottom: 24px;
+  margin-top: 0;
   position: relative;
   left: -850px;
   animation: slide-right 1000ms 1750ms forwards;
@@ -147,53 +168,96 @@
   -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  padding: 2%;
-  margin: auto;
-  margin-top: 25px;
+  margin: 12px auto;
   max-width: 650px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  animation-name: height;
-  animation-duration: 400ms;
+  max-height: 1000px;
+  transition: max-height 0.75s ease-in;
 }
 
 .collapsed-profile-summary {
-  visibility: collapse;
-  height: 0px;
-  animation: collapse 400ms forwards;
+  background-color: rgb(128, 128, 128, 0.35);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin: 12px auto;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 1s ease-out;
+  transition-delay: -0.5s;
 }
 
-.profile-summary p {
+.collapsed-profile-summary p {
   color: gainsboro;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+
 .profile-pic {
   margin-right: 35px;
   border-radius: 50%;
   width: 25%;
 }
 .summary {
+  margin: 2%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  animation-name: height;
-  animation-duration: 400ms;
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 1s ease-in;
+}
+
+.summary p {
+  color: gainsboro;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.collapsed-summary {
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s;
+  transition-delay: 0ms;
 }
 
 /* Skills */
 
 .skills {
   opacity: 1;
-  margin-top: 15px;
+  margin-bottom: 2%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   position: relative;
+  overflow: hidden;
+}
+
+.skills-collapse {
+  display: hidden;
+  opacity: 1;
+  margin-bottom: 2%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
 }
 
 .row-1,
@@ -209,58 +273,42 @@
 
 .fa-js-square {
   position: relative;
-  right: -2000px;
   color: #f1d63b;
-  animation: slide-left 1000ms 250ms forwards;
   text-shadow: 2px 2px 4px #000000;
 }
 .fa-react {
   position: relative;
-  right: -2000px;
   color: #00d2f8;
-  animation: slide-left 1000ms 300ms forwards;
   text-shadow: 2px 2px 4px #000000;
 }
 .fa-node-js {
   position: relative;
-  right: -2000px;
   color: #90ce41;
-  animation: slide-left 1000ms 350ms forwards;
   text-shadow: 2px 2px 4px #000000;
 }
 .fa-html5 {
   position: relative;
-  right: -2000px;
   color: #e4522a;
-  animation: slide-left 1000ms 400ms forwards;
   text-shadow: 2px 2px 4px #000000;
 }
 .fa-css3 {
   position: relative;
-  right: -2000px;
   color: #2092ec;
-  animation: slide-left 1000ms 450ms forwards;
   text-shadow: 2px 2px 4px #000000;
 }
 .fa-sass {
   position: relative;
-  right: -2000px;
   color: #cb729f;
-  animation: slide-left 1000ms 500ms forwards;
   text-shadow: 2px 2px 4px #000000;
 }
 .fa-less {
   position: relative;
-  right: -2000px;
   color: #1d3f6c;
-  animation: slide-left 1000ms 550ms forwards;
   text-shadow: 2px 2px 4px #000000;
 }
 .fa-python {
   position: relative;
-  right: -2000px;
   color: #5facef;
-  animation: slide-left 1000ms 600ms forwards;
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -346,11 +394,25 @@
     width: 90%;
   }
 
+  .collapsed-profile-summary {
+    flex-direction: column;
+    margin: 35px auto;
+    width: 90%;
+  }
+
   .summary {
     flex-direction: column;
   }
 
+  .collapsed-summary {
+    flex-direction: column;
+  }
+
   .summary p {
+    width: 90%;
+  }
+
+  .collapsed-summary p {
     width: 90%;
   }
 
@@ -361,12 +423,12 @@
 }
 
 @media (max-width: 610px) {
-
   .skills {
     flex-direction: column;
   }
 
-  .row-1, .row-2 {
+  .row-1,
+  .row-2 {
     margin: auto;
     margin-bottom: 10px;
     width: 80%;
@@ -416,27 +478,27 @@
   }
 }
 
-@keyframes collapse {
+@keyframes close {
   from {
-    height: 200px;
+    max-height: 2000px;
   }
   to {
     height: 0px;
     /* display: none; */
   }
 }
-@-webkit-keyframes collapse {
+@-webkit-keyframes close {
   from {
-    height: 200px;
+    max-height: 2000px;
   }
   to {
     height: 0px;
     /* display: none; */
   }
 }
-@-moz-keyframes collapse {
+@-moz-keyframes close {
   from {
-    height: 200px;
+    max-height: 2000px;
   }
   to {
     height: 0px;
@@ -510,7 +572,7 @@
 
 @keyframes slide-down {
   from {
-    top: -1000px;
+    top: -1200px;
   }
   to {
     top: 0;
@@ -518,7 +580,7 @@
 }
 @-webkit-keyframes slide-down {
   from {
-    top: -1000px;
+    top: -1200px;
   }
   to {
     top: 0;
@@ -526,7 +588,7 @@
 }
 @-moz-keyframes slide-down {
   from {
-    top: -1000px;
+    top: -1200px;
   }
   to {
     top: 0;
@@ -538,7 +600,7 @@
     top: 0;
   }
   to {
-    top: -1000px;
+    top: -1200px;
   }
 }
 @-webkit-keyframes slide-up {
@@ -546,7 +608,7 @@
     top: 0;
   }
   to {
-    top: -1000px;
+    top: -1200px;
   }
 }
 @-moz-keyframes slide-up {
@@ -554,6 +616,6 @@
     top: 0;
   }
   to {
-    top: -1000px;
+    top: -1200px;
   }
 }
