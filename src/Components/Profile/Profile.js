@@ -35,7 +35,9 @@ class Profile extends Component {
             </div>
           </div>
           <div className={this.state.active ? "profile-summary" : "collapsed-profile-summary"}>
+            {/* {this.state.active ? "profile-summary" : "collapsed-profile-summary"} */}
             <div className={this.state.active ? "summary" : "collapsed-summary"}>
+              {/* {this.state.active ? "summary" : "collapsed-summary"}> */}
               <img src={profilePic} className="profile-pic" />
               <p>
                 Collaborative Full Stack Web Developer with experience working
@@ -47,14 +49,19 @@ class Profile extends Component {
               </p>
             </div>
             <div className={this.state.active ? "skills" : "null"}>
-              <i class="fab fa-skill fa-js-square"></i>
-              <i class="fab fa-skill fa-react"></i>
-              <i class="fab fa-skill fa-node-js"></i>
-              <i class="fab fa-skill fa-html5"></i>
-              <i class="fab fa-skill fa-css3"></i>
-              <i class="fab fa-skill fa-sass"></i>
-              <i class="fab fa-skill fa-less"></i>
-              <i class="fab fa-skill fa-python"></i>
+              {/* {this.state.active ? "skills" : "null"}> */}
+              <div className="row-1">
+                <i class="fab fa-skill fa-js-square"></i>
+                <i class="fab fa-skill fa-react"></i>
+                <i class="fab fa-skill fa-node-js"></i>
+                <i class="fab fa-skill fa-html5"></i>
+              </div>
+              <div className="row-2">
+                <i class="fab fa-skill fa-css3"></i>
+                <i class="fab fa-skill fa-sass"></i>
+                <i class="fab fa-skill fa-less"></i>
+                <i class="fab fa-skill fa-python"></i>
+              </div>
             </div>
           </div>
           <hr className="border-divider" />
