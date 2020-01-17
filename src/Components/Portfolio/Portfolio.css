@@ -10,6 +10,7 @@
   position: absolute;
   top: 0;
   padding-top: 2%;
+  overflow-y: scroll;
 }
 
 /* Back button */
@@ -79,8 +80,10 @@
 }
 
 .top-row {
+  border: 1px solid red;
   display: flex;
   justify-content: space-evenly;
+  position: absolute;
   width: 100%;
 }
 
@@ -103,7 +106,7 @@
 }
 
 .active-project {
-  height: 85vh;
+  height: 81vh;
 }
 
 .portfolio-container .fas {
@@ -201,12 +204,14 @@
     height: 55vh;
     width: 100%;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .project,
   .active-project {
     width: 55%;
+    margin: auto;
+    margin-bottom: 45px;
   }
 
   .active-text p {
@@ -238,12 +243,13 @@
     height: 55vh;
     width: 100%;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .project,
   .active-project {
     width: 55%;
+    margin-bottom: 45px;
   }
 
   .active-text p {

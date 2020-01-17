@@ -336,10 +336,27 @@
     margin: 50px auto;
   }
 
+  .projects:hover {
+    animation: none;
+  }
+
   .profile-summary {
     flex-direction: column;
     margin: 35px auto;
     width: 90%;
+  }
+
+  .summary {
+    flex-direction: column;
+  }
+
+  .summary p {
+    width: 90%;
+  }
+
+  .profile-pic {
+    margin: auto;
+    width: 40%;
   }
 }
 
@@ -379,7 +396,7 @@
     height: 0px;
   }
   to {
-    height: 30vh;
+    max-height: 1000px;
   }
 }
 @-webkit-keyframes height {
@@ -387,7 +404,7 @@
     height: 0px;
   }
   to {
-    height: 30vh;
+    max-height: 1000px;
   }
 }
 @-moz-keyframes height {
@@ -395,7 +412,7 @@
     height: 0px;
   }
   to {
-    height: 30vh;
+    max-height: 1000px;
   }
 }
 
