@@ -1,8 +1,11 @@
 .App {
   background-color: #333;
   width: 100%;
-  height: auto;
   height: 100vh;
   overflow: hidden;
   position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

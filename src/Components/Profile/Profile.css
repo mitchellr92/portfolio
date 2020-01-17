@@ -9,7 +9,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /* Profile container */
@@ -147,11 +148,9 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 2%;
-  padding-bottom: 35px;
   margin: auto;
   margin-top: 25px;
   max-width: 650px;
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -192,8 +191,16 @@
   margin-top: 15px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   position: relative;
+}
+
+.row-1,
+.row-2 {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .fa-skill {
@@ -260,7 +267,6 @@
 /* Break points */
 
 @media (max-width: 800px) {
-
   .profile-initial {
     width: 100%;
     margin-left: 0;
@@ -328,13 +334,25 @@
     width: 50%;
     text-align: center;
     margin: 50px auto;
-    /* margin-top: 50px; */
   }
 
   .profile-summary {
     flex-direction: column;
     margin: 35px auto;
     width: 90%;
+  }
+}
+
+@media (max-width: 610px) {
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .row-1, .row-2 {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 80%;
   }
 }
 
@@ -361,7 +379,7 @@
     height: 0px;
   }
   to {
-    height: 200px;
+    height: 30vh;
   }
 }
 @-webkit-keyframes height {
@@ -369,7 +387,7 @@
     height: 0px;
   }
   to {
-    height: 200px;
+    height: 30vh;
   }
 }
 @-moz-keyframes height {
@@ -377,7 +395,7 @@
     height: 0px;
   }
   to {
-    height: 200px;
+    height: 30vh;
   }
 }
 
@@ -387,7 +405,7 @@
   }
   to {
     height: 0px;
-    display: none;
+    /* display: none; */
   }
 }
 @-webkit-keyframes collapse {
@@ -396,7 +414,7 @@
   }
   to {
     height: 0px;
-    display: none;
+    /* display: none; */
   }
 }
 @-moz-keyframes collapse {
@@ -405,7 +423,7 @@
   }
   to {
     height: 0px;
-    display: none;
+    /* display: none; */
   }
 }
 
