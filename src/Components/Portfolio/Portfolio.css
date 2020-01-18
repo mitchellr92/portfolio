@@ -38,11 +38,13 @@
 }
 
 .back-arrow-visible {
+  transition-duration: 0.5s;
   animation: spin 2500ms reverse 1;
 }
 
 .back-arrow-visible:hover {
   color: lightskyblue;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 .arrow-hidden {
@@ -100,8 +102,6 @@
   padding-top: 15px;
   color: #0080ff;
   font-size: 1.6rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .active-project {
