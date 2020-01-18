@@ -34,8 +34,16 @@ class Profile extends Component {
               <i class="fas fa-arrow-circle-up"></i>
             </div>
           </div>
-          <div className={this.state.active ? "profile-summary" : "collapsed-profile-summary"}>
-            <div className={this.state.active ? "summary" : "collapsed-summary"}>
+          <div
+            className={
+              this.state.active
+                ? "profile-summary"
+                : "collapsed-profile-summary"
+            }
+          >
+            <div
+              className={this.state.active ? "summary" : "collapsed-summary"}
+            >
               <img src={profilePic} className="profile-pic" />
               <p>
                 Collaborative Full Stack Web Developer with experience working
@@ -69,25 +77,27 @@ class Profile extends Component {
                 target="_blank"
                 href="https://github.com/mitchellr92"
               >
-                <i className="fab fa-github" />
+                <i className="fab fa-github link-button" />
               </a>
               <a
                 className="button"
                 target="_blank"
                 href="https://www.linkedin.com/in/mitchell-robles-aa7980165/"
               >
-                <i className="fab fa-linkedin-in" />
+                <i className="fab fa-linkedin-in link-button" />
               </a>
               <div className="button" onClick={this.props.openModal}>
-                <i className="fas fa-envelope"></i>
+                <i className="fas fa-envelope link-button"></i>
               </div>
             </div>
-            <div className="projects" onClick={this.props.openPortfolio}>
+            <div
+              className="projects link-button"
+              onClick={this.props.openPortfolio}
+            >
               Projects
             </div>
           </div>
         </div>
-        {/* <div className="box">Hello, there.</div> */}
       </div>
     );
   }

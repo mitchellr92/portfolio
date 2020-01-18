@@ -6,7 +6,6 @@
   width: 725px;
   height: 520px;
   z-index: 2;
-
 }
 
 .modal-visible {
@@ -24,8 +23,6 @@
   position: absolute;
   background-color: #222222;
   border-radius: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   animation: slide-right 1000ms forwards;
 }
 
@@ -43,14 +40,20 @@
 }
 
 .close-button {
+  transition-duration: 0.5s;
   color: #0080ff;
   margin-left: 7%;
   font-size: 1.9rem;
 }
 
 .close-button:hover {
+  text-shadow: 2px 2px 8px #000;
   cursor: pointer;
   color: lightskyblue;
+}
+
+.close-button:active {
+  transform: translateY(2px);
 }
 
 .send-message {
@@ -66,8 +69,6 @@ input {
   padding: 5px;
   width: 40%;
   height: 25px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 textarea {
@@ -76,8 +77,6 @@ textarea {
   margin-top: 30px;
   width: 100%;
   font-size: 18px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .send {
@@ -96,12 +95,19 @@ textarea {
   border-radius: 5px;
   color: slategrey;
   font-size: 1.2rem;
+  transition-duration: 0.25s;
 }
 
 .send-button:hover {
   cursor: pointer;
   color: #0080ff;
   border-color: #0080ff;
+  background: #333;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.send-button:active {
+  transform: translateY(2px);
 }
 
 .response {

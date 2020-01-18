@@ -1,22 +1,3 @@
-/* .box {
-  display: flex;
-  border: 1px solid red;
-  width: 150px;
-  z-index: 5;
-  position: relative;
-  margin: auto;
-  max-height: 0;
-  transition: max-height 0.5s ease-out;
-  overflow: hidden;
-}
-
-.box:hover {
-  background: green;
-  cursor: pointer;
-  max-height: 150px;
-  transition: max-height .0.5s ease-in;
-} */
-
 /* Page container */
 
 .page-container {
@@ -82,8 +63,6 @@
 .divider {
   color: #0080ff;
   font-size: 1.8rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .name {
@@ -98,6 +77,10 @@
   position: relative;
   left: -850px;
   animation: slide-right 1000ms 1750ms forwards;
+}
+
+.profile i {
+  animation: spin 0.5s forwards;
 }
 
 /* Links */
@@ -120,21 +103,27 @@
   color: #0080ff;
   margin-left: 7%;
   font-size: 1.9rem;
+  transition-duration: 0.5s;
 }
 
 .button:hover {
   color: lightskyblue;
   cursor: pointer;
-  animation: spin 375ms linear 1;
+  text-shadow: 2px 2px 8px #000000;
 }
 
-.up-arrow {
-  animation: half-spin 300ms linear 1;
+/* .link-button {
+  color: #0080ff;
+  margin-left: 7%;
+  font-size: 1.9rem;
+  transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
-.up-arrow:hover {
-  animation: spin 300ms linear 1;
-}
+.link-button:hover {
+  color: lightskyblue;
+  cursor: pointer;
+} */
 
 .download-container {
   width: 75%;
@@ -145,20 +134,20 @@
 
 .projects {
   color: #0080ff;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.6rem;
   text-align: end;
   width: 15%;
   margin-left: 10%;
   text-decoration: none;
+  transition-duration: 0.5s;
 }
 
 .projects:hover {
   cursor: pointer;
   color: lightskyblue;
   text-decoration: none;
-  animation: spin 500ms linear 1;
+  text-shadow: 2px 2px 8px #000000;
+  /* animation: spin 500ms linear 1; */
 }
 
 /* Profile summary */
@@ -197,8 +186,6 @@
 
 .collapsed-profile-summary p {
   color: gainsboro;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .profile-pic {
@@ -219,8 +206,6 @@
 
 .summary p {
   color: gainsboro;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .collapsed-summary {
@@ -438,71 +423,27 @@
 /* Animations */
 
 @-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(180deg);
+  }
   to {
     -moz-transform: rotate(360deg);
   }
 }
 @-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(180deg);
+  }
   to {
     -webkit-transform: rotate(360deg);
   }
 }
 @keyframes spin {
+  from {
+    transform: rotate(180deg);
+  }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes height {
-  from {
-    height: 0px;
-  }
-  to {
-    max-height: 1000px;
-  }
-}
-@-webkit-keyframes height {
-  from {
-    height: 0px;
-  }
-  to {
-    max-height: 1000px;
-  }
-}
-@-moz-keyframes height {
-  from {
-    height: 0px;
-  }
-  to {
-    max-height: 1000px;
-  }
-}
-
-@keyframes close {
-  from {
-    max-height: 2000px;
-  }
-  to {
-    height: 0px;
-    /* display: none; */
-  }
-}
-@-webkit-keyframes close {
-  from {
-    max-height: 2000px;
-  }
-  to {
-    height: 0px;
-    /* display: none; */
-  }
-}
-@-moz-keyframes close {
-  from {
-    max-height: 2000px;
-  }
-  to {
-    height: 0px;
-    /* display: none; */
   }
 }
 
