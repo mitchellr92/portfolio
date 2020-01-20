@@ -23,18 +23,20 @@ export class RvNav extends Component {
           className="project-image2"
         />
         <div
-          className={this.state.active ? "null" : "active-text"}
+          className={this.state.active ? "null" : "active-up-arrow"}
           onClick={this.toggleActive}
         >
           <i class="fas fa-angle-double-down"></i>
         </div>
         <div
-          className={this.state.active ? "active-text" : "null"}
+          className={this.state.active ? "active-down-arrow" : "null"}
           onClick={this.toggleActive}
         >
           <i class="fas fa-angle-double-up"></i>
         </div>
-        <div className={this.state.active ? "active-text" : "null"}>
+        <div
+          className={this.state.active ? "active-text" : "active-text-collapse"}
+        >
           <p>
             App designed to provide users the ability to create safe routes for
             RVs and trailers by allowing them upload personalized information
