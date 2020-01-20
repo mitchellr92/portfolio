@@ -124,16 +124,29 @@
 }
 
 .active-text {
+  overflow: hidden;
   padding: 4%;
-  height: 47vh;
-  max-height: 50px;
+  max-height: 2000px;
+  transition: max-height 1.5s ease-in;
 }
 
-.active-text i {
+.active-text-collapse {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s forwards;
+  transition-delay: -0.5s;
+}
+
+.active-up-arrow {
+  animation: spin 0.5s forwards;
+}
+
+.active-down-arrow {
   animation: spin 0.5s forwards;
 }
 
 .active-text p {
+  overflow: hidden;
   margin: 0;
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
@@ -141,7 +154,19 @@
   font-size: 1.25vw;
   color: darkgray;
   max-height: 2000px;
-  transition: max-height 0.75s ease-in;
+  transition: max-height 2s ease-in;
+}
+
+.active-text-collapse p {
+  margin: 0;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 1.25vw;
+  color: darkgray;
+  max-height: 0;
+  transition: max-height 1s;
+  transition-delay: -0.5s;
 }
 
 .repositories {

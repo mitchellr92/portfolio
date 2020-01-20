@@ -23,18 +23,18 @@ export class HauntedHouse extends Component {
           className="project-image2"
         />
         <div
-          className={this.state.active ? "null" : "active-text"}
+          className={this.state.active ? "null" : "active-up-arrow"}
           onClick={this.toggleActive}
         >
           <i class="fas fa-angle-double-down"></i>
         </div>
         <div
-          className={this.state.active ? "active-text" : "null"}
+          className={this.state.active ? "active-down-arrow" : "null"}
           onClick={this.toggleActive}
         >
           <i class="fas fa-angle-double-up"></i>
         </div>
-        <div className={this.state.active ? "active-text" : "null"}>
+        <div className={this.state.active ? "active-text" : "active-text-collapse"}>
           <p>
             Interactive game that allows you to move a sprite throughout a maze.
           </p>

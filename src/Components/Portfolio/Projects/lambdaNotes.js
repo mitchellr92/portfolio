@@ -13,25 +13,28 @@ export class LambdaNotes extends Component {
 
   render() {
     return (
-      <div
-        className={this.state.active ? "active-project" : "project"}
-      >
+      <div className={this.state.active ? "active-project" : "project"}>
         Lambda Notes
         <img
           src={screenshot2}
           alt="Project screenshot"
           className="project-image"
         />
-        <div className={this.state.active ? "null" : "active-text"} onClick={this.toggleActive}>
+        <div
+          className={this.state.active ? "null" : "active-up-arrow"}
+          onClick={this.toggleActive}
+        >
           <i class="fas fa-angle-double-down"></i>
         </div>
         <div
-          className={this.state.active ? "active-text" : "null"}
+          className={this.state.active ? "active-down-arrow" : "null"}
           onClick={this.toggleActive}
         >
           <i class="fas fa-angle-double-up"></i>
         </div>
-        <div className={this.state.active ? "active-text" : "null"}>
+        <div
+          className={this.state.active ? "active-text" : "active-text-collapse"}
+        >
           <p>
             App for creating and storing notes along with functionality allowing
             you to both delete and edit your notes.
