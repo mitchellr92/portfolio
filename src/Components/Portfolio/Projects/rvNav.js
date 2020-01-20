@@ -13,9 +13,7 @@ export class RvNav extends Component {
 
   render() {
     return (
-      <div
-        className={this.state.active ? "active-project" : "project"}
-      >
+      <div className={this.state.active ? "active-project" : "project"}>
         <a href="https://rvnav.com/" target="_blank">
           RV Nav
         </a>
@@ -24,8 +22,17 @@ export class RvNav extends Component {
           alt="Project screenshot"
           className="project-image2"
         />
-        <div className={this.state.active ? "null" : "active-text"} onClick={this.toggleActive}>
+        <div
+          className={this.state.active ? "null" : "active-text"}
+          onClick={this.toggleActive}
+        >
           <i class="fas fa-angle-double-down"></i>
+        </div>
+        <div
+          className={this.state.active ? "active-text" : "null"}
+          onClick={this.toggleActive}
+        >
+          <i class="fas fa-angle-double-up"></i>
         </div>
         <div className={this.state.active ? "active-text" : "null"}>
           <p>
@@ -39,9 +46,6 @@ export class RvNav extends Component {
             information according to user input. Used the Redux store to manage
             the state between the different forms.
           </p>
-          <div onClick={this.toggleActive} className="up-arrow">
-            <i class="fas fa-angle-double-up"></i>
-          </div>
         </div>
         <div className="repositories">
           <a

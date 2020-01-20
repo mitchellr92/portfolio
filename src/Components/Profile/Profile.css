@@ -112,26 +112,6 @@
   text-shadow: 2px 2px 8px #000000;
 }
 
-/* .link-button {
-  color: #0080ff;
-  margin-left: 7%;
-  font-size: 1.9rem;
-  transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-
-.link-button:hover {
-  color: lightskyblue;
-  cursor: pointer;
-} */
-
-.download-container {
-  width: 75%;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 25px;
-}
-
 .projects {
   color: #0080ff;
   font-size: 1.6rem;

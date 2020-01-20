@@ -28,6 +28,12 @@ export class HauntedHouse extends Component {
         >
           <i class="fas fa-angle-double-down"></i>
         </div>
+        <div
+          className={this.state.active ? "active-text" : "null"}
+          onClick={this.toggleActive}
+        >
+          <i class="fas fa-angle-double-up"></i>
+        </div>
         <div className={this.state.active ? "active-text" : "null"}>
           <p>
             Interactive game that allows you to move a sprite throughout a maze.
@@ -38,9 +44,6 @@ export class HauntedHouse extends Component {
             Django in a restricted amount of time. Worked with a team member to
             supply the front-end with a map generator for displaying the tiles.
           </p>
-          <div onClick={this.toggleActive}>
-            <i class="fas fa-angle-double-up"></i>
-          </div>
         </div>
         <div className="repositories">
           <a
