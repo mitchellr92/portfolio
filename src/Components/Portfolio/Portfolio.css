@@ -129,6 +129,10 @@
   max-height: 50px;
 }
 
+.active-text i {
+  animation: spin 0.5s forwards;
+}
+
 .active-text p {
   margin: 0;
   border-bottom: 1px solid grey;
@@ -136,6 +140,8 @@
   padding-bottom: 10px;
   font-size: 1.25vw;
   color: darkgray;
+  max-height: 2000px;
+  transition: max-height 0.75s ease-in;
 }
 
 .repositories {
@@ -337,5 +343,30 @@
 @-moz-keyframes spin-right {
   to {
     transform: rotate(370deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(180deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
