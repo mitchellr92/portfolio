@@ -19,7 +19,7 @@
   cursor: pointer;
   position: relative;
   margin-left: 6.5%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   right: -2000px;
 }
 
@@ -30,6 +30,7 @@
   right: -2000px;
   margin-left: 5%;
   font-size: 2.5rem;
+  font-weight: bold;
   animation: slide-left 2000ms 1500ms forwards;
 }
 
@@ -164,11 +165,12 @@
 
 .active-text p {
   overflow: hidden;
+  font-family: "Lucida Console", Monaco, monospace;
   margin: 0;
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 19.7px;
   color: darkgray;
 }
 
@@ -178,7 +180,8 @@
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  font-size: 20px;
+  font-size: 19.7px;
+  font-family: "Lucida Console", Monaco, monospace;
   color: darkgray;
 }
 
@@ -257,10 +260,6 @@
     margin: auto;
     margin-bottom: 45px;
   }
-
-  .active-text p {
-    font-size: 20px;
-  }
 }
 
 @media (max-width: 800px) {
@@ -282,12 +281,6 @@
     flex-direction: column;
     width: 100%;
   }
-
-  /* .project-link {
-    border: 1px solid red;
-    font-size: 30px;
-    margin: 0;
-  } */
 
   .active-text p {
     font-size: 17px;
