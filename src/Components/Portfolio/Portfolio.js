@@ -17,7 +17,7 @@ class Portfolio extends Component {
       backButton = "back-button-initial";
     } else if (this.props.display === "portfolio-hidden") {
       projects = "projects-visible projects-hidden";
-      backArrow = "back-arrow-visible arrow-hidden";
+      backArrow = "back-arrow-hidden";
       backButton = "back-button-visible button-hidden";
     } else if (this.props.display === "portfolio-visible") {
       projects = "projects-visible";
@@ -28,7 +28,8 @@ class Portfolio extends Component {
     return (
       <div className="portfolio-container">
         <div className={backButton} onClick={this.props.closePortfolio}>
-          <i className={`fas fa-arrow-circle-right ${backArrow}`}></i>
+          <i class={`fas fa-arrow-circle-right ${backArrow}`}></i>
+          {/* // <i className={`fas fa-arrow-circle-right ${backArrow}`}></i> */}
         </div>
         <div className={projects}>
           <div className="top-row">

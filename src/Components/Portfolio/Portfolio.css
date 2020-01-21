@@ -28,7 +28,7 @@
   position: relative;
   color: #0080ff;
   right: -2000px;
-  margin-left: 6.5%;
+  margin-left: 5%;
   font-size: 3rem;
   animation: slide-left 2000ms 1500ms forwards;
 }
@@ -38,17 +38,15 @@
 }
 
 .back-arrow-visible {
+  font-display: reverse;
   transition-duration: 0.5s;
-  animation: spin 2500ms reverse 1;
+  -webkit-transform: rotateY(180deg);
+  animation: spin-backwards 0.5s 3.75s forwards;
 }
 
 .back-arrow-visible:hover {
   color: lightskyblue;
   text-shadow: 2px 2px 8px #000000;
-}
-
-.arrow-hidden {
-  animation: spin-right 1200ms linear 1;
 }
 
 /* Projects */
@@ -66,9 +64,9 @@
 .projects-visible {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  width: 90%;
   margin: auto;
-  margin-top: 75px;
+  margin-top: 25px;
   position: relative;
   right: -2000px;
   animation: slide-left 1600ms 500ms forwards;
@@ -83,7 +81,7 @@
 
 .top-row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: absolute;
   width: 100%;
 }
@@ -96,27 +94,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
-  height: 40vh;
+  width: 355px;
   margin-bottom: 45px;
   padding-top: 15px;
   color: #0080ff;
   font-size: 1.6rem;
 }
 
+.project {
+  height: 300px;
+  transition: height 1s;
+}
+
 .active-project {
-  height: 81vh;
+  height: 700px;
+  transition: height 0.75s;
 }
 
-.portfolio-container .fas {
-  font-size: 3rem;
+.active-down-arrow {
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin: 15px auto;
+  transition-duration: 0.5s;
+  animation: spin 0.5s forwards;
 }
 
-.fa-angle-double-up {
-  display: flex;
-  justify-content: center;
-  width: 30px;
-  margin: auto;
+.active-down-arrow:hover {
+  color: lightskyblue;
+  cursor: pointer;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.active-up-arrow {
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin: 15px auto;
+  transition-duration: 0.5s;
+  animation: spin 0.5s forwards;
+}
+
+.active-up-arrow:hover {
+  color: lightskyblue;
+  cursor: pointer;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 .null {
@@ -125,24 +145,19 @@
 
 .active-text {
   overflow: hidden;
-  padding: 4%;
-  max-height: 2000px;
-  transition: max-height 1.5s ease-in;
+  width: 90%;
+  margin: 0 auto;
+  max-height: 390px;
+  transition: max-height 1s;
 }
 
 .active-text-collapse {
   overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
   max-height: 0;
-  transition: max-height 1s forwards;
-  transition-delay: -0.5s;
-}
-
-.active-up-arrow {
-  animation: spin 0.5s forwards;
-}
-
-.active-down-arrow {
-  animation: spin 0.5s forwards;
+  transition: max-height 1s;
 }
 
 .active-text p {
@@ -151,22 +166,18 @@
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  font-size: 1.25vw;
+  font-size: 20px;
   color: darkgray;
-  max-height: 2000px;
-  transition: max-height 2s ease-in;
 }
 
 .active-text-collapse p {
+  overflow: hidden;
   margin: 0;
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  font-size: 1.25vw;
+  font-size: 20px;
   color: darkgray;
-  max-height: 0;
-  transition: max-height 1s;
-  transition-delay: -0.5s;
 }
 
 .repositories {
@@ -245,7 +256,7 @@
   }
 
   .active-text p {
-    font-size: 1.5vw;
+    font-size: 20px;
   }
 }
 
@@ -283,16 +294,12 @@
   }
 
   .active-text p {
-    font-size: 1.5vw;
+    font-size: 20px;
   }
 
   .project,
   .active-project {
     width: 75%;
-  }
-
-  .active-text p {
-    font-size: 2.5vw;
   }
 }
 
@@ -340,38 +347,6 @@
 }
 
 @-moz-keyframes spin {
-  to {
-    -moz-transform: rotate(370deg);
-  }
-}
-@-webkit-keyframes spin {
-  to {
-    -webkit-transform: rotate(370deg);
-  }
-}
-@keyframes spin {
-  to {
-    transform: rotate(370deg);
-  }
-}
-
-@keyframes spin-right {
-  to {
-    transform: rotate(370deg);
-  }
-}
-@-webkit-keyframes spin-right {
-  to {
-    transform: rotate(370deg);
-  }
-}
-@-moz-keyframes spin-right {
-  to {
-    transform: rotate(370deg);
-  }
-}
-
-@-moz-keyframes spin {
   from {
     -moz-transform: rotate(180deg);
   }
@@ -388,6 +363,15 @@
   }
 }
 @keyframes spin {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-backwards {
   from {
     transform: rotate(180deg);
   }
