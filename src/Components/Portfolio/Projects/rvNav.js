@@ -14,7 +14,7 @@ export class RvNav extends Component {
   render() {
     return (
       <div className={this.state.active ? "active-project" : "project"}>
-        <a href="https://rvnav.com/" target="_blank">
+        <a className="project-link" href="https://rvnav.com/" target="_blank">
           RV Nav
         </a>
         <img

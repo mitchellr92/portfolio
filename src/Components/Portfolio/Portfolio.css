@@ -29,7 +29,7 @@
   color: #0080ff;
   right: -2000px;
   margin-left: 5%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   animation: slide-left 2000ms 1500ms forwards;
 }
 
@@ -38,10 +38,7 @@
 }
 
 .back-arrow-visible {
-  font-display: reverse;
   transition-duration: 0.5s;
-  -webkit-transform: rotateY(180deg);
-  animation: spin-backwards 0.5s 3.75s forwards;
 }
 
 .back-arrow-visible:hover {
@@ -109,6 +106,11 @@
 .active-project {
   height: 700px;
   transition: height 0.75s;
+}
+
+.project-link {
+  font-size: 28px;
+  margin: 0;
 }
 
 .active-down-arrow {
@@ -188,6 +190,7 @@
 }
 
 .repositories a {
+  margin: auto;
   font-size: 1.2rem;
 }
 
@@ -242,7 +245,6 @@
   }
 
   .project {
-    height: 55vh;
     width: 100%;
     margin: auto;
     margin-bottom: 45px;
@@ -250,7 +252,8 @@
 
   .project,
   .active-project {
-    width: 55%;
+    width: 90%;
+    max-width: 355px;
     margin: auto;
     margin-bottom: 45px;
   }
@@ -280,26 +283,18 @@
     width: 100%;
   }
 
-  .project {
-    height: 55vh;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 45px;
-  }
-
-  .project,
-  .active-project {
-    width: 55%;
-    margin-bottom: 45px;
-  }
+  /* .project-link {
+    border: 1px solid red;
+    font-size: 30px;
+    margin: 0;
+  } */
 
   .active-text p {
-    font-size: 20px;
+    font-size: 17px;
   }
 
-  .project,
-  .active-project {
-    width: 75%;
+  .active-text-collapse p {
+    font-size: 17px;
   }
 }
 

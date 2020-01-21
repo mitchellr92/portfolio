@@ -14,7 +14,7 @@ export class LambdaNotes extends Component {
   render() {
     return (
       <div className={this.state.active ? "active-project" : "project"}>
-        Lambda Notes
+        <div className="project-link">Lambda Notes</div>
         <img
           src={screenshot2}
           alt="Project screenshot"

@@ -14,7 +14,11 @@ export class HauntedHouse extends Component {
   render() {
     return (
       <div className={this.state.active ? "active-project" : "project"}>
-        <a href="https://spooky-mud.netlify.com/" target="_blank">
+        <a
+          className="project-link"
+          href="https://spooky-mud.netlify.com/"
+          target="_blank"
+        >
           Haunted House
         </a>
         <img
@@ -34,7 +38,9 @@ export class HauntedHouse extends Component {
         >
           <i class="fas fa-arrow-circle-up"></i>
         </div>
-        <div className={this.state.active ? "active-text" : "active-text-collapse"}>
+        <div
+          className={this.state.active ? "active-text" : "active-text-collapse"}
+        >
           <p>
             Interactive game that allows you to move a sprite throughout a maze.
           </p>
