@@ -3,7 +3,7 @@
 .modal-initial {
   position: relative;
   left: -1000px;
-  width: 725px;
+  width: 705px;
   height: 520px;
   z-index: 2;
 }
@@ -17,7 +17,7 @@
   margin-left: 7%;
   margin-top: 8%;
   padding: 1%;
-  width: 725px;
+  width: 705px;
   height: 520px;
   z-index: 2;
   position: absolute;
@@ -69,6 +69,7 @@ input {
   padding: 5px;
   width: 40%;
   height: 25px;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 textarea {
@@ -77,9 +78,11 @@ textarea {
   margin-top: 30px;
   width: 100%;
   font-size: 18px;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 .send {
+  margin: 0 25px 0 25px;
   display: flex;
   justify-content: space-between;
 }
@@ -87,7 +90,6 @@ textarea {
 .send-button {
   width: 175px;
   height: 40px;
-  margin-left: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,6 +115,7 @@ textarea {
 .response {
   color: #0080ff;
   width: 60%;
+  font-size: 18px;
 }
 
 .contact {
@@ -180,9 +183,18 @@ a:hover {
     margin-bottom: 25px;
   }
 
-  .send-button {
+  .send {
     margin: 0 30px;
-    width: 93%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .send-button {
+    width: 100%;
+  }
+
+  .response {
+    width: 100%;
   }
 
   .contact {
