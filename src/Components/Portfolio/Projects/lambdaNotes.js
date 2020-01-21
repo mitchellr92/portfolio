@@ -21,16 +21,16 @@ export class LambdaNotes extends Component {
           className="project-image"
         />
         <div
-          className={this.state.active ? "null" : "active-up-arrow"}
+          className={this.state.active ? "null" : "active-down-arrow"}
           onClick={this.toggleActive}
         >
-          <i class="fas fa-angle-double-down"></i>
+          <i class="fas fa-arrow-circle-down"></i>
         </div>
         <div
-          className={this.state.active ? "active-down-arrow" : "null"}
+          className={this.state.active ? "active-up-arrow" : "null"}
           onClick={this.toggleActive}
         >
-          <i class="fas fa-angle-double-up"></i>
+          <i class="fas fa-arrow-circle-up"></i>
         </div>
         <div
           className={this.state.active ? "active-text" : "active-text-collapse"}
