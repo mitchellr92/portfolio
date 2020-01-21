@@ -28,7 +28,8 @@ class Portfolio extends Component {
     return (
       <div className="portfolio-container">
         <div className={backButton} onClick={this.props.closePortfolio}>
-          <i class={`fas fa-arrow-circle-right ${backArrow}`}></i>
+          <div className={`${backArrow}`}>Home</div>
+          {/* <i class={`fas fa-arrow-circle-right ${backArrow}`}></i> */}
           {/* // <i className={`fas fa-arrow-circle-right ${backArrow}`}></i> */}
         </div>
         <div className={projects}>
