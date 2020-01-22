@@ -18,20 +18,25 @@ class Profile extends Component {
       <div className="page-container">
         <div className={this.props.display}>
           <div className="profile">
-            <p className="name">Mitchell Robles</p>
-            <p className="divider">|</p>
-            <p className="title">Web Developer</p>
-            <div
-              className={this.state.active ? "null" : "button down-arrow"}
-              onClick={this.toggleActive}
-            >
-              <i class="fas fa-arrow-circle-down"></i>
+            <div className="main-title">
+              <p className="name">Mitchell Robles</p>
+              <p className="divider">|</p>
+              <p className="title">Web Developer</p>
             </div>
-            <div
-              className={this.state.active ? "button down-arrow" : "null"}
-              onClick={this.toggleActive}
-            >
-              <i class="fas fa-arrow-circle-up"></i>
+            <div className="about-me-container">
+              <div
+                className={this.state.active ? "null" : "button down-arrow"}
+                onClick={this.toggleActive}
+              >
+                <i class="fas fa-arrow-circle-down"></i>
+              </div>
+              <div
+                className={this.state.active ? "button up-arrow" : "null"}
+                onClick={this.toggleActive}
+              >
+                <i class="fas fa-arrow-circle-up"></i>
+              </div>
+              <p className="about-me">About Me</p>
             </div>
           </div>
           <div
