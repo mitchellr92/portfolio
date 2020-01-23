@@ -62,17 +62,9 @@
   width: 70%;
 }
 
-.about-me-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  width: 30%;
-}
-
 .title,
 .name,
-.divider,
-.about-me {
+.divider {
   color: #0080ff;
   font-size: 1.8rem;
   font-weight: bold;
@@ -98,7 +90,33 @@
 }
 
 .about-me {
+  font-weight: bold;
   font-size: 1.6rem;
+}
+.up-arrow {
+  margin-left: 7%;
+  font-size: 1.9rem;
+}
+
+.down-arrow {
+  margin-left: 7%;
+  font-size: 1.9rem;
+}
+
+.about-me-container {
+  color: #0080ff;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  width: 30%;
+  transition-duration: 0.5s;
+}
+
+.about-me-container:hover {
+  color: lightskyblue;
+  cursor: pointer;
+  text-shadow: 1px 1px 8px #000000;
 }
 
 /* Links */

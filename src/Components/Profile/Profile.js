@@ -23,16 +23,16 @@ class Profile extends Component {
               <p className="divider">|</p>
               <p className="title">Web Developer</p>
             </div>
-            <div className="about-me-container">
+            <div className="about-me-container" onClick={this.toggleActive}>
               <div
-                className={this.state.active ? "null" : "button down-arrow"}
-                onClick={this.toggleActive}
+                className={this.state.active ? "null" : "down-arrow"}
+                // onClick={this.toggleActive}
               >
                 <i class="fas fa-arrow-circle-down"></i>
               </div>
               <div
-                className={this.state.active ? "button up-arrow" : "null"}
-                onClick={this.toggleActive}
+                className={this.state.active ? "up-arrow" : "null"}
+                // onClick={this.toggleActive}
               >
                 <i class="fas fa-arrow-circle-up"></i>
               </div>
