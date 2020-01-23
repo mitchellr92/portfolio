@@ -53,7 +53,7 @@ class Profile extends Component {
               <p>
                 I am a full stack web developer with a passion for creating
                 things. I love putting myself in challenging situations to help
-                grow not only professionally, but also a person. I enjoy working
+                grow not only professionally, but also as a person. I enjoy working
                 collaboratively with others and consider myself a people person.
                 Outside of web development I enjoy camping, woodworking and
                 spending time with my family. I'm looking forward to talking
