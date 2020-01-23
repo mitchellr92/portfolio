@@ -41,15 +41,22 @@ export class HauntedHouse extends Component {
         <div
           className={this.state.active ? "active-text" : "active-text-collapse"}
         >
-          <p>
-            Interactive game that allows you to move a sprite throughout a maze.
+          <p>React, Axios, JSON, CSS, Django</p>
+          <p className="description">
+            Interactive game that allows users to move characters throughout a
+            maze.
           </p>
-          <p>React, axios, json, CSS, Django</p>
-          <p>
-            Was in charge of deploying a back-end to Heroku while learning
-            Django in a restricted amount of time. Worked with a team member to
-            supply the front-end with a map generator for displaying the tiles.
-          </p>
+          <ul>
+            <li>
+              Deployed a functioning back end to Heroku while learning Django in
+              a restricted amount of time.
+            </li>
+            <br />
+            <li>
+              Worked with a team member to supply the front end with a
+              functional map generator for displaying the tiles.
+            </li>
+          </ul>
         </div>
         <div className="repositories">
           <a
