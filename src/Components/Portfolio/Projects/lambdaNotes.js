@@ -35,15 +35,21 @@ export class LambdaNotes extends Component {
         <div
           className={this.state.active ? "active-text" : "active-text-collapse"}
         >
-          <p>
-            App for creating and storing notes along with functionality allowing
-            you to both delete and edit your notes.
+          <p>React, Axios, JSON, CSS, NodeJS, Express, Knex</p>
+          <p className="description">
+            Allows user to creat, save, edit and delete notes.
           </p>
-          <p>React, axios, json, CSS, NodeJS, express, knex</p>
-          <p>
-            Built out both the front-end and back-end to communicate with each
-            other and carry out complete CRUD functionality.
-          </p>
+          <ul>
+            <li>
+              Built out both the front-end and back-end to communicate with each
+              other and carry out complete CRUD functionality.
+            </li>
+            <br />
+            <li>
+              Deployed back end through Heroku to host database on a live
+              server.
+            </li>
+          </ul>
         </div>
         <div className="repositories">
           <a

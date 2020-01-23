@@ -18,20 +18,25 @@ class Profile extends Component {
       <div className="page-container">
         <div className={this.props.display}>
           <div className="profile">
-            <p className="name">Mitchell Robles</p>
-            <p className="divider">|</p>
-            <p className="title">Web Developer</p>
-            <div
-              className={this.state.active ? "null" : "button down-arrow"}
-              onClick={this.toggleActive}
-            >
-              <i class="fas fa-arrow-circle-down"></i>
+            <div className="main-title">
+              <p className="name">Mitchell Robles</p>
+              <p className="divider">|</p>
+              <p className="title">Web Developer</p>
             </div>
-            <div
-              className={this.state.active ? "button down-arrow" : "null"}
-              onClick={this.toggleActive}
-            >
-              <i class="fas fa-arrow-circle-up"></i>
+            <div className="about-me-container">
+              <div
+                className={this.state.active ? "null" : "button down-arrow"}
+                onClick={this.toggleActive}
+              >
+                <i class="fas fa-arrow-circle-down"></i>
+              </div>
+              <div
+                className={this.state.active ? "button up-arrow" : "null"}
+                onClick={this.toggleActive}
+              >
+                <i class="fas fa-arrow-circle-up"></i>
+              </div>
+              <p className="about-me">About Me</p>
             </div>
           </div>
           <div
@@ -46,12 +51,14 @@ class Profile extends Component {
             >
               <img src={profilePic} className="profile-pic" />
               <p>
-                Collaborative Full Stack Web Developer with experience working
-                on multiple distributed cross-functional agile development
-                teams. Built multiple projects using JavaScript, HTML, CSS, and
-                Node.js. 7 years’ experience as an Electrician developing
-                attention to detail, critical thinking, and project management
-                skill set.
+                I am a full stack web developer with a passion for creating
+                things. I love putting myself in challenging situations to help
+                grow not only professionally, but also a person. I enjoy working
+                collaboratively with others and consider myself a people person.
+                Outside of web development I enjoy camping, woodworking and
+                spending time with my family. I'm looking forward to talking
+                with you!
+                {/* I am a full stack web developer with a passion for creating things. I love putting myself in challenging situations that I know I can overcome to help grow not only professionally, but as a person as. I enjoy working collaboratively with others and consider myself a people person. Outside of web development I enjoy camping, woodworking and spending time with my family. */}
               </p>
             </div>
             <div className={this.state.active ? "skills" : "skills-collapse"}>

@@ -163,7 +163,8 @@
   transition: max-height 1s;
 }
 
-.active-text p {
+.active-text p,
+ul {
   overflow: hidden;
   font-family: "Lucida Console", Monaco, monospace;
   margin: 0;
@@ -172,6 +173,14 @@
   padding-bottom: 10px;
   font-size: 19.7px;
   color: darkgray;
+}
+
+.active-text .description {
+  font-size: 18px;
+}
+
+.active-text ul {
+  font-size: 16px;
 }
 
 .active-text-collapse p {
@@ -185,6 +194,13 @@
   color: darkgray;
 }
 
+.active-text-collapse .description {
+  font-size: 18px;
+}
+
+.active-text-collapse ul {
+  font-size: 16px;
+}
 .repositories {
   display: flex;
   flex-direction: column;
@@ -288,6 +304,22 @@
 
   .active-text-collapse p {
     font-size: 17px;
+  }
+
+  .active-text .description {
+    font-size: 16px;
+  }
+
+  .active-text ul {
+    font-size: 15px;
+  }
+
+  .active-text-collapse .description {
+    font-size: 16px;
+  }
+
+  .active-text-collapse ul {
+    font-size: 15px;
   }
 }
 

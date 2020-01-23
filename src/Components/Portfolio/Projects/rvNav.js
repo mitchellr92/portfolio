@@ -37,17 +37,23 @@ export class RvNav extends Component {
         <div
           className={this.state.active ? "active-text" : "active-text-collapse"}
         >
-          <p>
-            App designed to provide users the ability to create safe routes for
-            RVs and trailers by allowing them upload personalized information
-            for their vehicles.
+          <p>React, Redux, Axios, JSON, CSS, NodeJS, Express, Knex</p>
+          <p className="description">
+            Empowers users to create safe travel routes for Recreational
+            Vehicles and Trailers by uploading vehicle specifications to a
+            personal profile.
           </p>
-          <p>React, Redux, axios, json, CSS, NodeJS, express, knex</p>
-          <p>
-            Was in charge of populating Vehicle information forms with correct
-            information according to user input. Used the Redux store to manage
-            the state between the different forms.
-          </p>
+          <ul>
+            <li>
+              Was in charge of populating Vehicle information forms with correct
+              information according to user input.
+            </li>
+            <br />
+            <li>
+              Completed in 8 weeks on 10 person team of: Data Scientists, iOS
+              developers and Full Stack Web Developers.
+            </li>
+          </ul>
         </div>
         <div className="repositories">
           <a
