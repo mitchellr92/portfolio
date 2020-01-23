@@ -37,11 +37,11 @@ export class LambdaNotes extends Component {
         >
           <p>React, Axios, JSON, CSS, NodeJS, Express, Knex</p>
           <p className="description">
-            Allows user to creat, save, edit and delete notes.
+            Allows user to create, save, edit and delete notes.
           </p>
           <ul>
             <li>
-              Built out both the front-end and back-end to communicate with each
+              Built out both the front end and back end to communicate with each
               other and carry out complete CRUD functionality.
             </li>
             <br />
