@@ -131,7 +131,7 @@
 
 .link-buttons {
   font-weight: lighter;
-  width: 75%;
+  width: 65%;
   display: flex;
   justify-content: flex-end;
 }
@@ -154,8 +154,7 @@
   font-size: 1.6rem;
   font-weight: bold;
   text-align: end;
-  width: 15%;
-  margin-left: 10%;
+  width: 35%;
   text-decoration: none;
   transition-duration: 0.5s;
 }
@@ -380,6 +379,14 @@
     align-items: center;
   }
 
+  .up-arrow {
+    font-size: 3rem;
+  }
+
+  .down-arrow {
+    font-size: 3rem;
+  }
+
   .links {
     width: 90%;
     margin: auto;
@@ -439,11 +446,16 @@
 
   .profile-pic {
     margin: auto;
-    width: 40%;
+    width: 30%;
   }
 }
 
 @media (max-width: 610px) {
+  
+  .profile-pic {
+    width: 40%;
+  }
+  
   .skills {
     flex-direction: column;
   }
