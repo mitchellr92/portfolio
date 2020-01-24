@@ -62,17 +62,9 @@
   width: 70%;
 }
 
-.about-me-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-end;
-  width: 30%;
-}
-
 .title,
 .name,
-.divider,
-.about-me {
+.divider {
   color: #0080ff;
   font-size: 1.8rem;
   font-weight: bold;
@@ -98,7 +90,33 @@
 }
 
 .about-me {
+  font-weight: bold;
   font-size: 1.6rem;
+}
+.up-arrow {
+  margin-left: 7%;
+  font-size: 1.9rem;
+}
+
+.down-arrow {
+  margin-left: 7%;
+  font-size: 1.9rem;
+}
+
+.about-me-container {
+  color: #0080ff;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  width: 30%;
+  transition-duration: 0.5s;
+}
+
+.about-me-container:hover {
+  color: lightskyblue;
+  cursor: pointer;
+  text-shadow: 1px 1px 8px #000000;
 }
 
 /* Links */
@@ -113,7 +131,7 @@
 
 .link-buttons {
   font-weight: lighter;
-  width: 75%;
+  width: 65%;
   display: flex;
   justify-content: flex-end;
 }
@@ -136,8 +154,7 @@
   font-size: 1.6rem;
   font-weight: bold;
   text-align: end;
-  width: 15%;
-  margin-left: 10%;
+  width: 35%;
   text-decoration: none;
   transition-duration: 0.5s;
 }
@@ -362,6 +379,14 @@
     align-items: center;
   }
 
+  .up-arrow {
+    font-size: 3rem;
+  }
+
+  .down-arrow {
+    font-size: 3rem;
+  }
+
   .links {
     width: 90%;
     margin: auto;
@@ -421,11 +446,16 @@
 
   .profile-pic {
     margin: auto;
-    width: 40%;
+    width: 30%;
   }
 }
 
 @media (max-width: 610px) {
+  
+  .profile-pic {
+    width: 40%;
+  }
+  
   .skills {
     flex-direction: column;
   }
