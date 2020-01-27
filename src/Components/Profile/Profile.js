@@ -53,12 +53,11 @@ class Profile extends Component {
               <p>
                 I am a full stack web developer with a passion for creating
                 things. I love putting myself in challenging situations to help
-                grow not only professionally, but also as a person. I enjoy working
-                collaboratively with others and consider myself a people person.
-                Outside of web development I enjoy camping, woodworking and
-                spending time with my family. I'm looking forward to talking
+                grow not only professionally, but also as a person. I enjoy
+                working collaboratively with others and consider myself a people
+                person. Outside of web development I enjoy camping, woodworking
+                and spending time with my family. I'm looking forward to talking
                 with you!
-                {/* I am a full stack web developer with a passion for creating things. I love putting myself in challenging situations that I know I can overcome to help grow not only professionally, but as a person as. I enjoy working collaboratively with others and consider myself a people person. Outside of web development I enjoy camping, woodworking and spending time with my family. */}
               </p>
             </div>
             <div className={this.state.active ? "skills" : "skills-collapse"}>
@@ -97,11 +96,10 @@ class Profile extends Component {
                 <i className="fas fa-envelope link-button"></i>
               </div>
             </div>
-            <div
-              className="projects link-button"
-              onClick={this.props.openPortfolio}
-            >
-              Projects
+            <div className="projects-container link-button">
+              <div className="projects-button" onClick={this.props.openPortfolio}>
+                Projects
+              </div>
             </div>
           </div>
         </div>
