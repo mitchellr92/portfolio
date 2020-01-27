@@ -149,17 +149,23 @@
   text-shadow: 2px 2px 8px #000000;
 }
 
-.projects {
+.projects-container {
+  display: flex;
+  justify-content: flex-end;
   color: #0080ff;
   font-size: 1.6rem;
   font-weight: bold;
   text-align: end;
   width: 35%;
   text-decoration: none;
-  transition-duration: 0.5s;
 }
 
-.projects:hover {
+.projects-button {
+  transition-duration: 0.5s;
+  
+}
+
+.projects-button:hover {
   cursor: pointer;
   color: lightskyblue;
   text-decoration: none;
@@ -451,11 +457,10 @@
 }
 
 @media (max-width: 610px) {
-  
   .profile-pic {
     width: 40%;
   }
-  
+
   .skills {
     flex-direction: column;
   }
