@@ -411,15 +411,10 @@
     font-size: 3.5rem;
   }
 
-  .projects {
+  .projects-container {
     font-size: 2.5rem;
-    width: 50%;
-    text-align: center;
+    justify-content: center;
     margin: 50px auto;
-  }
-
-  .projects:hover {
-    animation: none;
   }
 
   .profile-summary {
