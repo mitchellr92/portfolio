@@ -1,0 +1,295 @@
+.portfolio-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
+/* Back button */
+
+.back-button-initial,
+.back-button-visible,
+.back-button-hidden {
+  width: 130px;
+  margin-left: 5%;
+  margin-top: 25px;
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.back-button-initial {
+  right: -2000px;
+}
+
+.back-button-visible {
+  transition-duration: 0.5s;
+  right: -2000px;
+  animation: slide-left 2000ms 1500ms forwards;
+}
+
+.back-button-hidden {
+  right: 0;
+  animation: slide-right-off 1000ms forwards;
+}
+
+.back-button-visible:hover {
+  color: lightskyblue;
+  cursor: pointer;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+/* Projects container */
+
+.projects-initial,
+.projects-visible,
+.projects-hidden {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  margin-top: 25px;
+  position: relative;
+}
+
+.projects-initial {
+  right: -2000px;
+}
+
+.projects-visible {
+  right: -2000px;
+  animation: slide-left 1600ms 500ms forwards;
+}
+
+.projects-hidden {
+  right: 0;
+  animation: slide-right-off 1500ms 250ms forwards;
+}
+
+/* Projects */
+
+.project,
+.active-project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+  margin-bottom: 30px;
+  padding-top: 15px;
+  border-radius: 5px;
+  background-color: #222222;
+}
+
+.project {
+  height: 300px;
+  transition: height 1s;
+}
+
+.active-project {
+  height: 700px;
+  transition: height 0.75s;
+}
+
+.project-link {
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+}
+
+.project-image {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+  width: 65%;
+}
+
+.active-down-arrow i,
+.active-up-arrow i {
+  margin: 15px;
+  font-size: 2.2rem;
+  transition-duration: 0.5s;
+}
+
+.active-down-arrow i {
+  animation: spin 0.5s forwards;
+}
+
+.active-up-arrow i {
+  animation: spin 0.5s forwards;
+}
+
+.active-down-arrow i:hover,
+.active-up-arrow i:hover {
+  color: lightskyblue;
+  cursor: pointer;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.repositories {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* Project descriptions */
+
+.active-text,
+.active-text-collapse {
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.active-text {
+  max-height: 400px;
+  transition: max-height 1s;
+}
+
+.active-text-collapse {
+  max-height: 0;
+  transition: max-height 1s;
+}
+
+.active-text-collapse p,
+.active-text p,
+ul {
+  overflow: hidden;
+  font-family: "Lucida Console", Monaco, monospace;
+  margin: 0;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 16.5px;
+  color: darkgray;
+}
+
+/* Break points */
+
+@media (max-width: 770px) {
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .back-button-visible,
+  .back-button-hidden {
+    margin: 30px auto;
+  }
+
+  .projects-initial,
+  .projects-visible,
+  .projects-hidden {
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .active-project, .project {
+    max-width: 90%;
+  }
+
+  .active-text p {
+    font-size: 17px;
+  }
+
+  .active-text-collapse p {
+    font-size: 17px;
+  }
+
+  .active-text .description {
+    font-size: 16px;
+  }
+
+  .active-text ul {
+    font-size: 15px;
+  }
+
+  .active-text-collapse .description {
+    font-size: 16px;
+  }
+
+  .active-text-collapse ul {
+    font-size: 15px;
+  }
+}
+
+/* Animations */
+
+@keyframes slide-left {
+  100% {
+    right: 0;
+  }
+}
+@-webkit-keyframes slide-left {
+  100% {
+    right: 0;
+  }
+}
+@-moz-keyframes slide-left {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-right-off {
+  from {
+    right: 0;
+  }
+  to {
+    right: -2000px;
+  }
+}
+@-webkit-keyframes slide-right-off {
+  from {
+    right: 0;
+  }
+  to {
+    right: -2000px;
+  }
+}
+@-moz-keyframes slide-right-off {
+  from {
+    right: 0;
+  }
+  to {
+    right: -2000px;
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(180deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-backwards {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
