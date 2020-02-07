@@ -63,14 +63,14 @@ export class HauntedHouse extends Component {
           <a
             href="https://github.com/mitchellr92/front-end-project-week"
             target="_blank"
-            rel="noopener norefferer"
+            rel="noopener noreferrer"
           >
             Front-end repository
           </a>
           <a
             href="https://github.com/mitchellr92/back-end-project-week"
             target="_blank"
-            rel="noopener norefferer"
+            rel="noopener noreferrer"
           >
             Back-end repository
           </a>

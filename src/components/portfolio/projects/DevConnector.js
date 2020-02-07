@@ -60,7 +60,7 @@ export class DevConnector extends Component {
           <a
             href="https://github.com/mitchellr92/dev-connector"
             target="_blank"
-            rel="noopener norefferer"
+            rel="noopener noreferrer"
           >
             GitHub repository
           </a>

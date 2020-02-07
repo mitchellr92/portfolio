@@ -18,7 +18,7 @@ export class RvNav extends Component {
           className="project-link"
           href="https://rvnav.com/"
           target="_blank"
-          rel="noopener norefferer"
+          rel="noopener noreferrer"
         >
           RV Nav
         </a>
@@ -64,14 +64,14 @@ export class RvNav extends Component {
           <a
             href="https://github.com/Lambda-School-Labs/rv-nav-fe"
             target="_blank"
-            rel="noopener norefferer"
+            rel="noopener noreferrer"
           >
             Front-end repository
           </a>
           <a
             href="https://github.com/Lambda-School-Labs/rv-nav-be"
             target="_blank"
-            rel="noopener norefferer"
+            rel="noopener noreferrer"
           >
             Back-end repository
           </a>
