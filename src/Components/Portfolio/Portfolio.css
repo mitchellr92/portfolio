@@ -1,102 +1,86 @@
-/* Container */
-
 .portfolio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  padding-top: 2%;
+  z-index: 1;
   overflow-y: scroll;
 }
 
 /* Back button */
 
-.back-button-initial {
-  cursor: pointer;
-  position: relative;
+.back-button-initial,
+.back-button-visible,
+.back-button-hidden {
+  width: 130px;
   margin-left: 5%;
-  font-size: 2.5rem;
+  margin-top: 25px;
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.back-button-initial {
   right: -2000px;
 }
 
 .back-button-visible {
-  cursor: pointer;
-  position: relative;
-  color: #0080ff;
+  transition-duration: 0.5s;
   right: -2000px;
-  margin-left: 5%;
-  font-size: 2.5rem;
-  font-weight: bold;
   animation: slide-left 2000ms 1500ms forwards;
 }
 
-.button-hidden {
+.back-button-hidden {
+  right: 0;
   animation: slide-right-off 1000ms forwards;
 }
 
-.back-arrow-visible {
-  transition-duration: 0.5s;
-}
-
-.back-arrow-visible:hover {
+.back-button-visible:hover {
   color: lightskyblue;
+  cursor: pointer;
   text-shadow: 2px 2px 8px #000000;
 }
 
-/* Projects */
+/* Projects container */
 
-.projects-initial {
+.projects-initial,
+.projects-visible,
+.projects-hidden {
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  margin: auto;
-  margin-top: 75px;
-  position: relative;
-  right: -2000px;
-}
-
-.projects-visible {
-  display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 90%;
   margin: auto;
   margin-top: 25px;
   position: relative;
+}
+
+.projects-initial {
+  right: -2000px;
+}
+
+.projects-visible {
   right: -2000px;
   animation: slide-left 1600ms 500ms forwards;
-  z-index: 2;
 }
 
 .projects-hidden {
-  position: relative;
   right: 0;
   animation: slide-right-off 1500ms 250ms forwards;
 }
 
-.top-row {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
-}
+/* Projects */
 
 .project,
 .active-project {
-  background-color: #222222;
-  border-radius: 10px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 355px;
-  margin-bottom: 45px;
+  width: 340px;
+  margin-bottom: 30px;
   padding-top: 15px;
-  color: #0080ff;
-  font-size: 1.6rem;
+  border-radius: 5px;
+  background-color: #222222;
 }
 
 .project {
@@ -110,59 +94,66 @@
 }
 
 .project-link {
-  font-size: 28px;
-  margin: 0;
+  font-size: 1.9rem;
+  margin-bottom: 15px;
 }
 
-.active-down-arrow {
-  font-size: 2.5rem;
-  cursor: pointer;
-  margin: 15px auto;
+.project-image {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+  width: 65%;
+}
+
+.active-down-arrow i,
+.active-up-arrow i {
+  margin: 15px;
+  font-size: 2.2rem;
   transition-duration: 0.5s;
+}
+
+.active-down-arrow i {
   animation: spin 0.5s forwards;
 }
 
-.active-down-arrow:hover {
+.active-up-arrow i {
+  animation: spin 0.5s forwards;
+}
+
+.active-down-arrow i:hover,
+.active-up-arrow i:hover {
   color: lightskyblue;
   cursor: pointer;
   text-shadow: 2px 2px 8px #000000;
 }
 
-.active-up-arrow {
-  font-size: 2.5rem;
-  cursor: pointer;
-  margin: 15px auto;
-  transition-duration: 0.5s;
-  animation: spin 0.5s forwards;
+.repositories {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 15px;
+  font-size: 1.4rem;
 }
 
-.active-up-arrow:hover {
-  color: lightskyblue;
-  cursor: pointer;
-  text-shadow: 2px 2px 8px #000000;
-}
+/* Project descriptions */
 
-.null {
-  display: none;
-}
-
-.active-text {
-  overflow: hidden;
-  width: 90%;
-  margin: 0 auto;
-  max-height: 390px;
-  transition: max-height 1s;
-}
-
+.active-text,
 .active-text-collapse {
   overflow: hidden;
   width: 90%;
   margin: 0 auto;
-  height: auto;
+}
+
+.active-text {
+  max-height: 400px;
+  transition: max-height 1s;
+}
+
+.active-text-collapse {
   max-height: 0;
   transition: max-height 1s;
 }
 
+.active-text-collapse p,
 .active-text p,
 ul {
   overflow: hidden;
@@ -171,131 +162,34 @@ ul {
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  font-size: 19.7px;
+  font-size: 16.5px;
   color: darkgray;
-}
-
-.active-text .description {
-  font-size: 18px;
-}
-
-.active-text ul {
-  font-size: 16px;
-}
-
-.active-text-collapse p {
-  overflow: hidden;
-  margin: 0;
-  border-bottom: 1px solid grey;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  font-size: 19.7px;
-  font-family: "Lucida Console", Monaco, monospace;
-  color: darkgray;
-}
-
-.active-text-collapse .description {
-  font-size: 18px;
-}
-
-.active-text-collapse ul {
-  font-size: 16px;
-}
-.repositories {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 15px;
-}
-
-.repositories a {
-  margin: auto;
-  font-size: 1.2rem;
-}
-
-.project-image {
-  border-radius: 5px;
-  max-width: 45%;
-  max-height: 225px;
-  margin-top: 5%;
-  box-shadow: 10px 10px 5px black;
-  width: auto;
-  height: auto;
-}
-
-.project-image2 {
-  border-radius: 5px;
-  max-width: 55%;
-  max-height: 225px;
-  margin-top: 5%;
-  box-shadow: 10px 10px 5px black;
-  width: auto;
-  height: auto;
 }
 
 /* Break points */
 
-@media (max-width: 1200px) {
-  .portfolio-container {
-    flex-direction: column;
-    align-items: center;
-    overflow-y: scroll;
-  }
-
-  .projects-initial {
-    position: absolute;
-    width: 100%;
-  }
-
-  .projects-visible {
-    position: absolute;
-    margin-top: 100px;
-    width: 100%;
-  }
-
-  .back-button-visible {
-    margin: auto;
-    margin-top: 10px;
-  }
-
-  .top-row {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .project {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 45px;
-  }
-
-  .project,
-  .active-project {
-    width: 90%;
-    max-width: 355px;
-    margin: auto;
-    margin-bottom: 45px;
-  }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 770px) {
   .portfolio-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .projects-initial {
-    width: 100%;
+  .back-button-visible,
+  .back-button-hidden {
+    margin: 30px auto;
   }
 
-  .projects-visible {
-    position: absolute;
+  .projects-initial,
+  .projects-visible,
+  .projects-hidden {
     width: 100%;
-  }
-
-  .top-row {
+    flex-wrap: nowrap;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+  }
+
+  .active-project, .project {
+    max-width: 90%;
   }
 
   .active-text p {

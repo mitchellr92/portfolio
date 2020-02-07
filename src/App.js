@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-// import { Route } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
 
-import Portfolio from "./Components/Portfolio/Portfolio";
-import Profile from "./Components/Profile/Profile";
-import Modal from "./Components/Modal/modal";
+import Portfolio from "./components/portfolio/Portfolio";
+import Profile from "./components/profile/Profile";
+import Modal from "./components/modal/Modal";
 
 class App extends Component {
   state = {
@@ -26,22 +25,32 @@ class App extends Component {
   };
 
   openModal = () => {
-    if (this.state.modal === "modal-visible hidden" || this.state.modal === "modal-initial") {
+    console.log("Modal opened");
+    if (
+      this.state.modal === "modal-hidden" ||
+      this.state.modal === "modal-initial"
+    ) {
       this.setState({ modal: "modal-visible" });
     }
   };
 
   closeModal = () => {
     if (this.state.modal === "modal-visible") {
-      this.setState({ modal: "modal-visible hidden" });
+      this.setState({ modal: "modal-hidden" });
     }
   };
 
   openPortfolio = () => {
-    if (this.state.portfolio === "portfolio-hidden" || this.state.portfolio === "portfolio-initial") {
+    if (
+      this.state.portfolio === "portfolio-hidden" ||
+      this.state.portfolio === "portfolio-initial"
+    ) {
       this.setState({ portfolio: "portfolio-visible" });
     }
-    if (this.state.profile === "profile-visible" || this.state.profile === "profile-initial") {
+    if (
+      this.state.profile === "profile-visible" ||
+      this.state.profile === "profile-initial"
+    ) {
       this.setState({ profile: "profile-hidden" });
     }
   };
@@ -50,7 +59,7 @@ class App extends Component {
     if (this.state.portfolio === "portfolio-visible") {
       this.setState({ portfolio: "portfolio-hidden" });
     }
-    if (this.state.profile === "profile-hidden"){
+    if (this.state.profile === "profile-hidden") {
       this.setState({ profile: "profile-visible" });
     }
   };
@@ -64,7 +73,6 @@ class App extends Component {
           newMessage={this.newMessage}
         />
         <Profile
-          hideProfile={this.hideProfile}
           display={this.state.profile}
           openModal={this.openModal}
           openPortfolio={this.openPortfolio}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import screenshot3 from "../Screenshots/screenshot3.png";
+import screenshot3 from "../screenshots/screenshot3.png";
 
 export class RvNav extends Component {
   state = {
@@ -14,25 +14,30 @@ export class RvNav extends Component {
   render() {
     return (
       <div className={this.state.active ? "active-project" : "project"}>
-        <a className="project-link" href="https://rvnav.com/" target="_blank">
+        <a
+          className="project-link"
+          href="https://rvnav.com/"
+          target="_blank"
+          rel="noopener norefferer"
+        >
           RV Nav
         </a>
         <img
           src={screenshot3}
           alt="Project screenshot"
-          className="project-image2"
+          className="project-image"
         />
         <div
           className={this.state.active ? "null" : "active-down-arrow"}
           onClick={this.toggleActive}
         >
-          <i class="fas fa-arrow-circle-down"></i>
+          <i className="fas fa-arrow-circle-down"></i>
         </div>
         <div
           className={this.state.active ? "active-up-arrow" : "null"}
           onClick={this.toggleActive}
         >
-          <i class="fas fa-arrow-circle-up"></i>
+          <i className="fas fa-arrow-circle-up"></i>
         </div>
         <div
           className={this.state.active ? "active-text" : "active-text-collapse"}
@@ -59,12 +64,14 @@ export class RvNav extends Component {
           <a
             href="https://github.com/Lambda-School-Labs/rv-nav-fe"
             target="_blank"
+            rel="noopener norefferer"
           >
             Front-end repository
           </a>
           <a
             href="https://github.com/Lambda-School-Labs/rv-nav-be"
             target="_blank"
+            rel="noopener norefferer"
           >
             Back-end repository
           </a>

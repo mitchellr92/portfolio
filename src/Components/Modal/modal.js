@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./modal.css";
+import "./Modal.css";
 
-export class Modal extends Component {
+class Modal extends Component {
   constructor(props) {
     super(props);
 
@@ -10,7 +10,7 @@ export class Modal extends Component {
       name: "",
       email: "",
       message: "",
-      send: "none",
+      send: "none"
     };
   }
 
@@ -37,15 +37,14 @@ export class Modal extends Component {
   };
 
   render() {
+    console.log("display", this.props.display);
     return (
-      <div
-        className={this.props.display}
-      >
+      <div className={this.props.display}>
         <div className="modal-title">
           Get In Touch
-          <div className="close-button" onClick={this.props.closeModal}>
-            <i class="fas fa-arrow-circle-left"></i>
-          </div>
+          <i className="close-button" onClick={this.props.closeModal}>
+            <i className="fas fa-arrow-circle-left"></i>
+          </i>
         </div>
         <div className="send-message">
           <input
@@ -84,7 +83,7 @@ export class Modal extends Component {
         <div className="contact">
           <div className="email">
             <i className="fas fa-mobile-alt"> :</i>
-            <a href="telto:9517418669">951-741-8669</a>
+            <div href="telto:9517418669">951-741-8669</div>
           </div>
           <div className="phone">
             <i className="fas fa-envelope"> :</i>

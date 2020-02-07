@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import screenshot4 from "../screenshots/screenshot4.png";
+import screenshot1 from "../screenshots/screenshot1.png";
 
-export class HauntedHouse extends Component {
+export class DevConnector extends Component {
   state = {
     active: false
   };
@@ -16,14 +16,14 @@ export class HauntedHouse extends Component {
       <div className={this.state.active ? "active-project" : "project"}>
         <a
           className="project-link"
-          href="https://spooky-mud.netlify.com/"
+          href="https://mysterious-thicket-85025.herokuapp.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Haunted House
+          Dev Connector
         </a>
         <img
-          src={screenshot4}
+          src={screenshot1}
           alt="Project screenshot"
           className="project-image"
         />
@@ -42,37 +42,27 @@ export class HauntedHouse extends Component {
         <div
           className={this.state.active ? "active-text" : "active-text-collapse"}
         >
-          <p>React, Axios, JSON, CSS, Django</p>
+          <p>React, Redux, Axios, JSON, CSS, NodeJS, Express, Knex</p>
           <p className="description">
-            Interactive game that allows users to move characters throughout a
-            maze.
+            Platform that allows developers to create and manage profiles and
+            have interactive conversations.
           </p>
           <ul>
-            <li>
-              Deployed a functioning back end to Heroku while learning Django in
-              a restricted amount of time
-            </li>
+            <li>Used MongoDB for storing and managing user data.</li>
             <br />
             <li>
-              Worked with a team member to supply the front end with a
-              functional map generator for displaying the tiles.
+              Kept front and back end in one repository and deployed the entire
+              app through Heroku.
             </li>
           </ul>
         </div>
         <div className="repositories">
           <a
-            href="https://github.com/mitchellr92/front-end-project-week"
+            href="https://github.com/mitchellr92/dev-connector"
             target="_blank"
             rel="noopener norefferer"
           >
-            Front-end repository
-          </a>
-          <a
-            href="https://github.com/mitchellr92/back-end-project-week"
-            target="_blank"
-            rel="noopener norefferer"
-          >
-            Back-end repository
+            GitHub repository
           </a>
         </div>
       </div>
@@ -80,4 +70,4 @@ export class HauntedHouse extends Component {
   }
 }
 
-export default HauntedHouse;
+export default DevConnector;

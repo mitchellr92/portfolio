@@ -1,63 +1,55 @@
-/* Modal */
-
-.modal-initial {
-  position: relative;
-  left: -1000px;
-  width: 705px;
-  height: 520px;
-  z-index: 2;
-}
-
-.modal-visible {
+.modal-initial,
+.modal-visible,
+.modal-hidden {
+  z-index: 3;
+  border-radius: 5px;
+  background-color: #222222;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: relative;
-  left: -1000px;
-  margin-left: 7%;
-  margin-top: 8%;
-  padding: 1%;
-  width: 705px;
-  height: 520px;
-  z-index: 2;
+  padding: 3%;
+  margin-left: 10%;
+  margin-top: 5%;
+  max-width: 675px;
+  height: 500px;
   position: absolute;
-  background-color: #222222;
-  border-radius: 10px;
-  animation: slide-right 1000ms forwards;
+  left: -1000px;
 }
 
-.hidden {
-  animation: slide-left-off 1000ms;
+.modal-visible {
+  animation: slide-right 1s forwards;
 }
+
+.modal-hidden {
+  animation: slide-left-off 1s;
+}
+
+/* Modal header */
 
 .modal-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 25px 0 25px;
   color: #0080ff;
   font-size: 2.1rem;
 }
 
-.close-button {
+.close-button i {
   transition-duration: 0.5s;
   color: #0080ff;
-  margin-left: 7%;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
 }
 
-.close-button:hover {
+.close-button i:hover {
   text-shadow: 2px 2px 8px #000;
   cursor: pointer;
   color: lightskyblue;
 }
 
-.close-button:active {
-  transform: translateY(2px);
-}
+/* Input boxes */
 
 .send-message {
-  margin: 0 25px 0 25px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -81,8 +73,9 @@ textarea {
   font-family: "Lucida Console", Monaco, monospace;
 }
 
+/* Send button */
+
 .send {
-  margin: 0 25px 0 25px;
   display: flex;
   justify-content: space-between;
 }
@@ -118,9 +111,7 @@ textarea {
   font-size: 18px;
 }
 
-.contact {
-  margin: 0 25px 0 25px;
-}
+/* Contact info */
 
 .contact,
 .email,
@@ -145,8 +136,9 @@ a:hover {
 /* Break points */
 
 @media (max-width: 800px) {
-  .modal-visible {
-    width: 100%;
+  .modal-visible,
+  .modal-hidden {
+    max-width: 100%;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -208,13 +200,12 @@ a:hover {
     color: #0080ff;
     display: flex;
     align-items: baseline;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     justify-content: space-between;
   }
 
-  a {
-    margin-bottom: 15px;
-    font-size: 1.2rem;
+  .phone {
+    margin-top: 10px;
   }
 }
 

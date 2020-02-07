@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import screenshot2 from "../Screenshots/screenshot2.png";
+import screenshot2 from "../screenshots/screenshot2.png";
 
 export class LambdaNotes extends Component {
   state = {
@@ -14,7 +14,7 @@ export class LambdaNotes extends Component {
   render() {
     return (
       <div className={this.state.active ? "active-project" : "project"}>
-        <div className="project-link">Lambda Notes</div>
+        <div className="project-link">Notes App</div>
         <img
           src={screenshot2}
           alt="Project screenshot"
@@ -24,13 +24,13 @@ export class LambdaNotes extends Component {
           className={this.state.active ? "null" : "active-down-arrow"}
           onClick={this.toggleActive}
         >
-          <i class="fas fa-arrow-circle-down"></i>
+          <i className="fas fa-arrow-circle-down"></i>
         </div>
         <div
           className={this.state.active ? "active-up-arrow" : "null"}
           onClick={this.toggleActive}
         >
-          <i class="fas fa-arrow-circle-up"></i>
+          <i className="fas fa-arrow-circle-up"></i>
         </div>
         <div
           className={this.state.active ? "active-text" : "active-text-collapse"}
@@ -55,12 +55,14 @@ export class LambdaNotes extends Component {
           <a
             href="https://github.com/mitchellr92/front-end-project-week"
             target="_blank"
+            rel="noopener norefferer"
           >
             Front-end repository
           </a>
           <a
             href="https://github.com/mitchellr92/back-end-project-week"
             target="_blank"
+            rel="noopener norefferer"
           >
             Back-end repository
           </a>
