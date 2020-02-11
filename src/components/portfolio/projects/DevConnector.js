@@ -42,7 +42,7 @@ export class DevConnector extends Component {
         <div
           className={this.state.active ? "active-text" : "active-text-collapse"}
         >
-          <p>React, Redux, Axios, JSON, CSS, NodeJS, Express, Knex</p>
+          <p>React, Redux, Axios, JSON, CSS, NodeJS, Express</p>
           <p className="description">
             Platform that allows developers to create and manage profiles and
             have interactive conversations.
