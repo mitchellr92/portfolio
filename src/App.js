@@ -66,22 +66,22 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Modal
-          display={this.state.modal}
-          closeModal={this.closeModal}
-          newMessage={this.newMessage}
-        />
-        <Profile
-          display={this.state.profile}
-          openModal={this.openModal}
-          openPortfolio={this.openPortfolio}
-        />
-        <Portfolio
-          display={this.state.portfolio}
-          closePortfolio={this.closePortfolio}
-        />
-      </div>
+        <div className="App">
+          <Modal
+            display={this.state.modal}
+            closeModal={this.closeModal}
+            newMessage={this.newMessage}
+          />
+          <Profile
+            display={this.state.profile}
+            openModal={this.openModal}
+            openPortfolio={this.openPortfolio}
+          />
+          <Portfolio
+            display={this.state.portfolio}
+            closePortfolio={this.closePortfolio}
+          />
+        </div>
     );
   }
 }
