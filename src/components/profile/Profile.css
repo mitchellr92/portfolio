@@ -10,6 +10,7 @@
 .profile-initial,
 .profile-visible,
 .profile-hidden {
+  /* border: 1px solid red; */
   width: 705px;
   margin-left: 10%;
   margin-top: 10%;

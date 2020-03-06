@@ -16,7 +16,7 @@ export class HauntedHouse extends Component {
       <div className={this.state.active ? "active-project" : "project"}>
         <a
           className="project-link"
-          href="https://spooky-mud.netlify.com/"
+          href="https://haunted-house.netlify.com/"
           target="_blank"
           rel="noopener noreferrer"
         >

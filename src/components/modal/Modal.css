@@ -11,7 +11,7 @@
   padding: 3%;
   margin-left: 10%;
   margin-top: 5%;
-  max-width: 675px;
+  max-width: 676px;
   height: 500px;
   position: absolute;
   left: -1000px;
@@ -213,23 +213,23 @@ a:hover {
 
 @keyframes slide-right {
   100% {
-    left: 0;
+    left: -1px;
   }
 }
 @-webkit-keyframes slide-right {
   100% {
-    left: 0;
+    left: -1px;
   }
 }
 @-moz-keyframes slide-right {
   100% {
-    left: 0;
+    left: -1px;
   }
 }
 
 @keyframes slide-left-off {
   from {
-    left: 0;
+    left: -1px;
   }
   to {
     left: -1000px;
@@ -237,7 +237,7 @@ a:hover {
 }
 @-webkit-keyframes slide-left-off {
   from {
-    left: 0;
+    left: -1px;
   }
   to {
     left: -1000px;
@@ -245,7 +245,7 @@ a:hover {
 }
 @-moz-keyframes slide-left-off {
   from {
-    left: 0;
+    left: -1px;
   }
   to {
     left: -1000px;
